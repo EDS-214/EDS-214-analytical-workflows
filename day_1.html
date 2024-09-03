@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EDS214 - Analytical Workflows and Scientific Reproducibility - Reproducible &amp; Collaborative Workflows</title>
+<title>Day 1 - Reproducible &amp; Collaborative Workflows – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -126,7 +92,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Daily Materials</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
@@ -162,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/brunj7/EDS-214-analytical-workflows" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -177,42 +143,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#day-1" id="toc-day-1" class="nav-link active" data-scroll-target="#day-1">Day 1</a></li>
-  <li><a href="#morning" id="toc-morning" class="nav-link" data-scroll-target="#morning">Morning</a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-eds-214" id="toc-introduction-to-eds-214" class="nav-link" data-scroll-target="#introduction-to-eds-214">Introduction to EDS-214</a></li>
-  <li><a href="#lecture-1-definitions-and-concepts-of-reproducible-workflows" id="toc-lecture-1-definitions-and-concepts-of-reproducible-workflows" class="nav-link" data-scroll-target="#lecture-1-definitions-and-concepts-of-reproducible-workflows">Lecture 1: Definitions and Concepts of reproducible workflows</a></li>
-  <li><a href="#planing-things" id="toc-planing-things" class="nav-link" data-scroll-target="#planing-things">Planing things</a>
-  <ul class="collapse">
-  <li><a href="#from-drawings-to-pseudocode" id="toc-from-drawings-to-pseudocode" class="nav-link" data-scroll-target="#from-drawings-to-pseudocode">From drawings to pseudocode</a></li>
-  </ul></li>
-  <li><a href="#interactive-session-1-develop-your-worklow-skills" id="toc-interactive-session-1-develop-your-worklow-skills" class="nav-link" data-scroll-target="#interactive-session-1-develop-your-worklow-skills">Interactive session 1: Develop your worklow skills 💪</a></li>
-  </ul></li>
-  <li><a href="#afternoon" id="toc-afternoon" class="nav-link" data-scroll-target="#afternoon">Afternoon</a>
-  <ul class="collapse">
-  <li><a href="#lecture-2-coding-together" id="toc-lecture-2-coding-together" class="nav-link" data-scroll-target="#lecture-2-coding-together">Lecture 2: Coding together</a>
-  <ul class="collapse">
-  <li><a href="#collaborating-using-github" id="toc-collaborating-using-github" class="nav-link" data-scroll-target="#collaborating-using-github">Collaborating using GitHub</a></li>
-  </ul></li>
-  <li><a href="#interactive-session-2-collaborative-coding-with-github" id="toc-interactive-session-2-collaborative-coding-with-github" class="nav-link" data-scroll-target="#interactive-session-2-collaborative-coding-with-github">Interactive session 2: Collaborative coding with GitHub</a></li>
-  <li><a href="#bonus-of-the-day-git-therapy" id="toc-bonus-of-the-day-git-therapy" class="nav-link" data-scroll-target="#bonus-of-the-day-git-therapy">Bonus of the day: Git Therapy</a>
-  <ul class="collapse">
-  <li><a href="#git-commit-messages" id="toc-git-commit-messages" class="nav-link" data-scroll-target="#git-commit-messages"><code>git</code> commit messages</a></li>
-  <li><a href="#github-conflicts" id="toc-github-conflicts" class="nav-link" data-scroll-target="#github-conflicts">GitHub conflicts</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link active" data-scroll-target="#further-reading">Further reading</a>
   <ul class="collapse">
   <li><a href="#data-and-scientific-workflow-management" id="toc-data-and-scientific-workflow-management" class="nav-link" data-scroll-target="#data-and-scientific-workflow-management">Data and scientific workflow management:</a></li>
   <li><a href="#open-science" id="toc-open-science" class="nav-link" data-scroll-target="#open-science">Open Science</a></li>
   <li><a href="#collaborative-coding" id="toc-collaborative-coding" class="nav-link" data-scroll-target="#collaborative-coding">Collaborative coding</a></li>
   <li><a href="#code-review" id="toc-code-review" class="nav-link" data-scroll-target="#code-review">Code Review</a></li>
   <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a></li>
-  <li><a href="#github-workflow" id="toc-github-workflow" class="nav-link" data-scroll-target="#github-workflow">GitHub Workflow</a>
-  <ul class="collapse">
-  <li><a href="#git-using-rstudio" id="toc-git-using-rstudio" class="nav-link" data-scroll-target="#git-using-rstudio">Git using RStudio</a></li>
-  <li><a href="#undoing-things" id="toc-undoing-things" class="nav-link" data-scroll-target="#undoing-things">Undoing things</a></li>
-  </ul></li>
+  <li><a href="#github-workflow" id="toc-github-workflow" class="nav-link" data-scroll-target="#github-workflow">GitHub Workflow</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -222,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reproducible &amp; Collaborative Workflows</h1>
+<h1 class="title">Day 1 - Reproducible &amp; Collaborative Workflows</h1>
 </div>
 
 
@@ -239,13 +177,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="day-1" class="level1">
-<h1>Day 1</h1>
+<p><br></p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
-</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Time (PST)</strong></th>
@@ -255,27 +188,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>10:00am - 10:50am</td>
-<td><em>Introduction &amp; Reproducible workflows (50 min)</em></td>
+<td><em>Lecture 1: <a href="https://docs.google.com/presentation/d/e/2PACX-1vQoawMQwTyWma4JsDePgainH7WNrRGWBEBVm794FCjrp6gyYoi6RrfBDJM5thJCLy4GAqJES8AR-5GB/pub?start=false&amp;loop=false&amp;delayms=3000" target="_blank">Course Introduction</a>; <a href="https://docs.google.com/presentation/d/e/2PACX-1vRO81O7IJeTHihyMu6yXTsHhWozBbTWWVHy9YJ2ytilrOBji24dzhDTMilQc0hna9prfXLlsLnafa1B/pub?start=false&amp;loop=false&amp;delayms=60000" target="_blank">Reproducible workflows</a> (50 min)</em></td>
 </tr>
 <tr class="even">
 <td>10:50am - 11:00am</td>
 <td><em>Break (10 min)</em></td>
 </tr>
 <tr class="odd">
-<td>11:00am - 12:30pm</td>
-<td><em>Interactive Session: Drawing board + reporting (60 min); git recap (30min)</em></td>
+<td>11:00am - 12:00pm</td>
+<td><em>Interactive Session 1: <a href="day1-pseudocode.html" target="_blank">Flow charts</a>; <a href="day1-hands-on_drawings.html" target="_blank">Drawing board + reporting</a> (60 min)</em></td>
 </tr>
 <tr class="even">
+<td>12:00pm - 12:30pm</td>
+<td><em>Lecture 2: <a href="https://brunj7.github.io/EDS-214-analytical-workflows/day1-git_github_recap.html" target="_blank">git discussion</a>; <a href="day1-coding_together.html" target="_blank">Coding together</a> (30 min)</em></td>
+</tr>
+<tr class="odd">
 <td>12:30pm - 1:30pm</td>
 <td><em>Lunch</em></td>
 </tr>
+<tr class="even">
+<td>1:30pm - 2:20pm</td>
+<td><em>Interactive Session 2: <a href="day1-github_collab.html" target="_blank">Collaborative coding with GitHub</a> - Fork (50 min)</em></td>
+</tr>
 <tr class="odd">
-<td>1:30pm - 2:00pm</td>
-<td><em>Collaborative workflows: Fork and Branches (30 min)</em></td>
+<td>2:20pm - 2:30pm</td>
+<td><em>Break (10 min)</em></td>
 </tr>
 <tr class="even">
-<td>2:00pm - 3:00pm</td>
-<td><em>Interactive Session: Collaborating with GitHub (60 min)</em></td>
+<td>2:30pm - 3:00pm</td>
+<td><em>Interactive Session 3: <a href="day1-github_collab.html" target="_blank">Collaborative coding with GitHub</a> - Branches (60 min)</em></td>
 </tr>
 <tr class="odd">
 <td>3:00pm - 3:10pm</td>
@@ -283,116 +224,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>3:10pm - 4:00pm</td>
-<td><em>git conflicts (50 min)</em></td>
+<td><em><a href="day1-git-collaboration-conflicts.html" target="_blank">git conflicts</a> (50 min)</em></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="morning" class="level1">
-<h1>Morning</h1>
-<section id="introduction-to-eds-214" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-eds-214">Introduction to EDS-214</h2>
-<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vQoawMQwTyWma4JsDePgainH7WNrRGWBEBVm794FCjrp6gyYoi6RrfBDJM5thJCLy4GAqJES8AR-5GB/pub?start=false&amp;loop=false&amp;delayms=3000"><strong>A few words…</strong></a></p>
-</section>
-<section id="lecture-1-definitions-and-concepts-of-reproducible-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-1-definitions-and-concepts-of-reproducible-workflows">Lecture 1: Definitions and Concepts of reproducible workflows</h2>
-<p><a href="https://docs.google.com/presentation/d/e/2PACX-1vRO81O7IJeTHihyMu6yXTsHhWozBbTWWVHy9YJ2ytilrOBji24dzhDTMilQc0hna9prfXLlsLnafa1B/pub?start=false&amp;loop=false&amp;delayms=60000"><strong>Slide deck</strong></a></p>
-</section>
-<section id="planing-things" class="level2">
-<h2 class="anchored" data-anchor-id="planing-things">Planing things</h2>
-<p><strong>Don’t start implementing nor coding without planning!</strong> It is important to stress that scientists write scripts to help them to investigate scientific question(s). Therefore scripting should not drive our analysis and thinking. We strongly recommend you take the time to plan ahead all the steps you need to conduct your analysis. Developing such a scientific workflow will help you to narrow down the tasks that are needed to move forward your analysis.</p>
-<section id="from-drawings-to-pseudocode" class="level3">
-<h3 class="anchored" data-anchor-id="from-drawings-to-pseudocode">From drawings to pseudocode</h3>
-<p><a href="day1-pseudocode.html"><strong>Materials</strong></a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/whiteborad_drawings.png" class="img-fluid figure-img"></p>
-<figcaption>Cherubini et al., 2007</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="interactive-session-1-develop-your-worklow-skills" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-session-1-develop-your-worklow-skills">Interactive session 1: Develop your worklow skills 💪</h2>
-<p><a href="day1-hands-on_drawings.html">Investigating the impacts of Hurricane on stream chemistry in Puerto Rico</a></p>
-<hr>
-</section>
-</section>
-<section id="afternoon" class="level1">
-<h1>Afternoon</h1>
-<section id="lecture-2-coding-together" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-2-coding-together">Lecture 2: Coding together</h2>
-<p><a href="day1-coding_together.html"><strong>Materials</strong></a></p>
-<section id="collaborating-using-github" class="level3">
-<h3 class="anchored" data-anchor-id="collaborating-using-github">Collaborating using GitHub</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Setting git on Taylor (if not yet done)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>At the <strong>Terminal</strong>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Jane Doe"</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email janedoe@example.com</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'cache --timeout=10000000'</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="setting-github-token-on-taylor" class="level3">
-<h3 class="anchored" data-anchor-id="setting-github-token-on-taylor">Setting GitHub token on Taylor</h3>
-<p>At the <strong>R Console</strong>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On your laptop</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() <span class="co"># This should open a web browser on GitHub</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># On Taylor </span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</div>
-</div>
-</div>
-<section id="collaborating-through-forking" class="level4">
-<h4 class="anchored" data-anchor-id="collaborating-through-forking">Collaborating through forking</h4>
-<p><a href="day1-github_forking.html"><strong>Materials</strong></a></p>
-</section>
-<section id="collaborating-through-branches" class="level4">
-<h4 class="anchored" data-anchor-id="collaborating-through-branches">Collaborating through branches</h4>
-<p><a href="day1-github_branches.html"><strong>Materials</strong></a></p>
-</section>
-</section>
-</section>
-<section id="interactive-session-2-collaborative-coding-with-github" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-session-2-collaborative-coding-with-github">Interactive session 2: Collaborative coding with GitHub</h2>
-<p><a href="https://github.com/brunj7/eds214-handson-ghcollab" class="uri">https://github.com/brunj7/eds214-handson-ghcollab</a></p>
-</section>
-<section id="bonus-of-the-day-git-therapy" class="level2">
-<h2 class="anchored" data-anchor-id="bonus-of-the-day-git-therapy">Bonus of the day: Git Therapy</h2>
-<section id="git-commit-messages" class="level3">
-<h3 class="anchored" data-anchor-id="git-commit-messages"><code>git</code> commit messages</h3>
-<p><a href="day1-github_commit_messages.html"><strong>Materials</strong></a></p>
-</section>
-<section id="github-conflicts" class="level3">
-<h3 class="anchored" data-anchor-id="github-conflicts">GitHub conflicts</h3>
-<p>First thing to know is that actually <code>git pull</code> is a two step process: <code>git pull = git fetch + git merge</code></p>
-<p>Second: you did nothing wrong!! Git tries to merge files automatically. When the changes are on the same file far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, <code>git</code> will call you to the rescue and ask you how to best merge the two versions.</p>
-<p><a href="day1-git-collaboration-conflicts.html"><strong>Materials</strong></a></p>
-<hr>
-</section>
-</section>
-</section>
-<section id="further-reading" class="level1">
-<h1>Further reading</h1>
+<p><br> <br></p>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
 <p>Here are a few selected publications to help you to learn more about these topics.</p>
-<section id="data-and-scientific-workflow-management" class="level2">
-<h2 class="anchored" data-anchor-id="data-and-scientific-workflow-management">Data and scientific workflow management:</h2>
+<section id="data-and-scientific-workflow-management" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-scientific-workflow-management">Data and scientific workflow management:</h3>
 <ul>
 <li>The Practice of Reproducible Research-Case Studies and Lessons from the Data-Intensive Sciences:<br>
 Kitzes, Justin, Daniel Turek, and Fatma Deniz. n.d. <a href="http://www.practicereproducibleresearch.org/" class="uri">http://www.practicereproducibleresearch.org/</a></li>
@@ -410,8 +251,8 @@ Kitzes, Justin, Daniel Turek, and Fatma Deniz. n.d. <a href="http://www.practice
 <a href="https://www.dataone.org/education-modules">https://www.dataone.org/education-modules</a></li>
 </ul>
 </section>
-<section id="open-science" class="level2">
-<h2 class="anchored" data-anchor-id="open-science">Open Science</h2>
+<section id="open-science" class="level3">
+<h3 class="anchored" data-anchor-id="open-science">Open Science</h3>
 <ul>
 <li>The Tao of open science for ecology:<br>
 <a href="https://doi.org/10.1890/ES14-00402.1">https://doi.org/10.1890/ES14-00402.1</a></li>
@@ -430,28 +271,28 @@ Kitzes, Justin, Daniel Turek, and Fatma Deniz. n.d. <a href="http://www.practice
 <a href="https://doi.org/10.1038/s41563-019-0539-5">https://doi.org/10.1038/s41563-019-0539-5</a></li>
 </ul>
 </section>
-<section id="collaborative-coding" class="level2">
-<h2 class="anchored" data-anchor-id="collaborative-coding">Collaborative coding</h2>
+<section id="collaborative-coding" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-coding">Collaborative coding</h3>
 <ul>
 <li>A new grad’s guide to coding as a team - Atlassian: <a href="https://www.atlassian.com/blog/wp-content/uploads/HelloWorldEbook.pdf" class="uri">https://www.atlassian.com/blog/wp-content/uploads/HelloWorldEbook.pdf</a></li>
 <li>10 tips for efficient programming: <a href="https://www.devx.com/enterprise/top-10-tips-for-efficient-team-coding.html" class="uri">https://www.devx.com/enterprise/top-10-tips-for-efficient-team-coding.html</a></li>
 <li>Agile Manifesto: <a href="https://moodle2019-20.ua.es/moodle/pluginfile.php/2213/mod_resource/content/2/agile-manifesto.pdf" class="uri">https://moodle2019-20.ua.es/moodle/pluginfile.php/2213/mod_resource/content/2/agile-manifesto.pdf</a></li>
 </ul>
 </section>
-<section id="code-review" class="level2">
-<h2 class="anchored" data-anchor-id="code-review">Code Review</h2>
+<section id="code-review" class="level3">
+<h3 class="anchored" data-anchor-id="code-review">Code Review</h3>
 <ul>
 <li>Small-Group Code Reviews For Education: <a href="https://cacm.acm.org/blogs/blog-cacm/175944-small-group-code-reviews-for-education/fulltext" class="uri">https://cacm.acm.org/blogs/blog-cacm/175944-small-group-code-reviews-for-education/fulltext</a></li>
 </ul>
 </section>
-<section id="branches" class="level2">
-<h2 class="anchored" data-anchor-id="branches">Branches</h2>
+<section id="branches" class="level3">
+<h3 class="anchored" data-anchor-id="branches">Branches</h3>
 <ul>
 <li>Interactive tutorial to learn more about git branches and more <a href="https://learngitbranching.js.org/" class="uri">https://learngitbranching.js.org/</a></li>
 </ul>
 </section>
-<section id="github-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="github-workflow">GitHub Workflow</h2>
+<section id="github-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="github-workflow">GitHub Workflow</h3>
 <ul>
 <li>GitHub:
 <ul>
@@ -470,8 +311,8 @@ Kitzes, Justin, Daniel Turek, and Fatma Deniz. n.d. <a href="http://www.practice
 <li>using git in a collaborative environment: <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow" class="uri">https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow</a> https://moodle2019-20.ua.es/moodle/pluginfile.php/2213/mod_resource/content/2/agile-manifesto.pdf</li>
 </ul></li>
 </ul>
-<section id="git-using-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="git-using-rstudio">Git using RStudio</h3>
+<section id="git-using-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="git-using-rstudio">Git using RStudio</h4>
 <ul>
 <li>Happy Git and GitHub for the useR:<a href="http://happygitwithr.com/" class="uri">http://happygitwithr.com/</a></li>
 <li>R packages - Git and GitHub: <a href="http://r-pkgs.had.co.nz/git.html#git-init" class="uri">http://r-pkgs.had.co.nz/git.html#git-init</a></li>
@@ -492,8 +333,8 @@ Kitzes, Justin, Daniel Turek, and Fatma Deniz. n.d. <a href="http://www.practice
 <li>GitPro book (2nd edition): <a href="https://git-scm.com/book/en/v2" class="uri">https://git-scm.com/book/en/v2</a></li>
 </ul>
 </section>
-<section id="undoing-things" class="level3">
-<h3 class="anchored" data-anchor-id="undoing-things">Undoing things</h3>
+<section id="undoing-things" class="level4">
+<h4 class="anchored" data-anchor-id="undoing-things">Undoing things</h4>
 <ul>
 <li>Help to decide how to undo your problem: <a href="http://justinhileman.info/article/git-pretty/git-pretty.png" class="uri">http://justinhileman.info/article/git-pretty/git-pretty.png</a></li>
 <li>Undo almost everything with git <a href="https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/" class="uri">https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/</a></li>
@@ -555,18 +396,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -598,15 +428,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/brunj7\.github\.io\/EDS-214-analytical-workflows\/");
+      var filterRegex = new RegExp("https:\/\/EDS-214\.github\.io\/EDS-214-analytical-workflows\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

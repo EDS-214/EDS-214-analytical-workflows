@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EDS214 - Analytical Workflows and Scientific Reproducibility - Reproducible Analytical Workflows</title>
+<title>Reproducible Analytical Workflows – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Daily Materials</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/brunj7/EDS-214-analytical-workflows" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -143,10 +143,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#analytical-workflow-frameworks-in-r" id="toc-analytical-workflow-frameworks-in-r" class="nav-link active" data-scroll-target="#analytical-workflow-frameworks-in-r">Analytical workflow frameworks in R</a>
+  <li><a href="#leveraging-existing-frameworks-for-reproducibility" id="toc-leveraging-existing-frameworks-for-reproducibility" class="nav-link active" data-scroll-target="#leveraging-existing-frameworks-for-reproducibility">Leveraging existing frameworks for reproducibility</a>
   <ul class="collapse">
-  <li><a href="#targets" id="toc-targets" class="nav-link" data-scroll-target="#targets">Targets</a></li>
-  <li><a href="#pointblank" id="toc-pointblank" class="nav-link" data-scroll-target="#pointblank">Pointblank</a></li>
+  <li><a href="#analytical-workflow-frameworks-in-r" id="toc-analytical-workflow-frameworks-in-r" class="nav-link" data-scroll-target="#analytical-workflow-frameworks-in-r">Analytical workflow frameworks in R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -173,6 +172,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="leveraging-existing-frameworks-for-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="leveraging-existing-frameworks-for-reproducibility">Leveraging existing frameworks for reproducibility</h2>
+<p>Please remember that every workflow or framework is opinionated. This is also true for the tools out there that can help you to develop reproducible workflows. It is great practice to test them on a small project to see if hey could fit your project needs and way of working and collaborating. In this section we will go over a few R packages that could be of interest for your project.</p>
+<section id="analytical-workflow-frameworks-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-workflow-frameworks-in-r">Analytical workflow frameworks in R</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -183,19 +187,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="analytical-workflow-frameworks-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="analytical-workflow-frameworks-in-r">Analytical workflow frameworks in R</h2>
-<section id="targets" class="level3">
-<h3 class="anchored" data-anchor-id="targets">Targets</h3>
+<section id="targets" class="level4">
+<h4 class="anchored" data-anchor-id="targets">Targets</h4>
 <p>The <code>targets</code> R package can be very useful if you have a complex workflow that is built of many parts that take time to rerun. Target can detect and run only the strict necessary steps to rerun when a specific change has been done to the workflow.</p>
 <p>Here for more: <a href="https://books.ropensci.org/targets/" class="uri">https://books.ropensci.org/targets/</a></p>
+<p><strong>Our practice example: <a href="https://github.com/EDS-214/eds214-handson-targets" class="uri">https://github.com/EDS-214/eds214-handson-targets</a></strong></p>
 </section>
-<section id="pointblank" class="level3">
-<h3 class="anchored" data-anchor-id="pointblank">Pointblank</h3>
+<section id="pointblank" class="level4">
+<h4 class="anchored" data-anchor-id="pointblank">Pointblank</h4>
 <p>Although the <code>pointblank</code> package is mainly framed as a validating tool of the various part of your workflow, it provide a set of tools and great integration with the R Markdown ecosystem. It is also quite flexible making it possible to leverage this tool in a variety of project setups.</p>
 <p><a href="https://github.com/rstudio/pointblank" class="uri">https://github.com/rstudio/pointblank</a></p>
 
 
+</section>
 </section>
 </section>
 
@@ -248,18 +252,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -291,15 +284,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/brunj7\.github\.io\/EDS-214-analytical-workflows\/");
+      var filterRegex = new RegExp("https:\/\/EDS-214\.github\.io\/EDS-214-analytical-workflows\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

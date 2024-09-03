@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands-on: Planning your work – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
+<title>Getting Data using APIs – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,8 +143,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#good-news-we-found-data-for-one-more-watershed" id="toc-good-news-we-found-data-for-one-more-watershed" class="nav-link active" data-scroll-target="#good-news-we-found-data-for-one-more-watershed">Good news we found data for one more watershed :)</a></li>
-  <li><a href="#this-is-your-lucky-day" id="toc-this-is-your-lucky-day" class="nav-link" data-scroll-target="#this-is-your-lucky-day">This is your lucky day!!</a></li>
+  <li><a href="#the-manual-way" id="toc-the-manual-way" class="nav-link active" data-scroll-target="#the-manual-way">The manual way</a></li>
+  <li><a href="#the-programmatic-way" id="toc-the-programmatic-way" class="nav-link" data-scroll-target="#the-programmatic-way">The programmatic way</a></li>
   </ul>
 </nav>
     </div>
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hands-on: Planning your work</h1>
+<h1 class="title">Getting Data using APIs</h1>
 </div>
 
 
@@ -170,34 +170,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="good-news-we-found-data-for-one-more-watershed" class="level2">
-<h2 class="anchored" data-anchor-id="good-news-we-found-data-for-one-more-watershed">Good news we found data for one more watershed :)</h2>
-<p>Actually our team also collected data for an adjacent watershed!!</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="img/luq-map-all.png" class="img-fluid figure-img" width="702"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong>=&gt; How should you modify your workflow to handle this new situation? (10min)</strong></p>
+<section id="the-manual-way" class="level2">
+<h2 class="anchored" data-anchor-id="the-manual-way">The manual way</h2>
+<p>Using website to retrieve data is great interactive way to search and explore data of interest. Let’s start our day by searching some data on the data repository DateONE: <a href="https://search.dataone.org/data" class="uri">https://search.dataone.org/data</a></p>
+<p>In case you need some inspiration, look at this dataset about historic precipitation in Alaska: <a href="https://doi.org/10.5063/N29VCQ" class="uri">https://doi.org/10.5063/N29VCQ</a></p>
+<p><br></p>
 </section>
-<section id="this-is-your-lucky-day" class="level2">
-<h2 class="anchored" data-anchor-id="this-is-your-lucky-day">This is your lucky day!!</h2>
-<p>We found data for additional chemistry measurements while skimming through the database :)</p>
-<p>We now want to be able to produce the following plot</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="img/luq-ts-plot-all.png" class="img-fluid figure-img" width="798"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong>=&gt; How should you modify your workflow to handle this new situation? (5min)</strong></p>
+<section id="the-programmatic-way" class="level2">
+<h2 class="anchored" data-anchor-id="the-programmatic-way">The programmatic way</h2>
+<p>Although discovering data through a web interface is convenient and offers a great experience, it is often hard to scale this approach or to integrate it into a reproducible workflow.</p>
+<p><strong><a href="https://EDS-214.github.io/eds214-slides/api.html">Slides</a></strong></p>
 
 
 </section>

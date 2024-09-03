@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EDS214 - Analytical Workflows and Scientific Reproducibility - Group Project</title>
+<title>Group Project – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -92,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Daily Materials</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
@@ -128,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/brunj7/EDS-214-analytical-workflows" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -153,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#chemistry-of-stream-water-data-from-the-luquillo-mountains" id="toc-chemistry-of-stream-water-data-from-the-luquillo-mountains" class="nav-link" data-scroll-target="#chemistry-of-stream-water-data-from-the-luquillo-mountains">Chemistry of stream water data from the Luquillo Mountains</a></li>
   </ul></li>
   <li><a href="#group-project-presentation-10min-5-slides" id="toc-group-project-presentation-10min-5-slides" class="nav-link" data-scroll-target="#group-project-presentation-10min-5-slides">Group project presentation (10min; 5 slides)</a></li>
-  <li><a href="#groups-2023" id="toc-groups-2023" class="nav-link" data-scroll-target="#groups-2023">Groups 2023</a></li>
+  <li><a href="#how-to-read-data-from-the-shared-folder" id="toc-how-to-read-data-from-the-shared-folder" class="nav-link" data-scroll-target="#how-to-read-data-from-the-shared-folder">How to read data from the shared folder</a></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul></li>
   </ul>
@@ -190,9 +224,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Find an awesome name for your group (one of the hardest <a href="https://www.karlton.org/2017/12/naming-things-hard/">steps</a>)</li>
 <li>Setup a shared GitHub repository</li>
-<li>Use the MEDS server Taylor as your main computing resource</li>
+<li>Use the MEDS server <code>Workbench-1</code> as your main computing resource</li>
 <li>Use GitHub to manage your code development in a collaborative manner</li>
-<li>Use shared folder on Taylor to manage your data <code>/courses/EDS214/group_project/my_group_name</code></li>
+<li>Use shared folder on <code>Workbench-1</code> to manage your data <code>/courses/EDS214/group_project/my_group_name</code></li>
 <li>Document your work as you go!!
 <ul>
 <li>Comment your code</li>
@@ -201,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Use GitHub issues to track your work and discuss progress and tasks</li>
 </ul>
 <section id="log-your-resources-on-this-google-sheet" class="level4">
-<h4 class="anchored" data-anchor-id="log-your-resources-on-this-google-sheet">Log your resources on this <a href="https://docs.google.com/spreadsheets/d/1cVoUFvSUdn04gzBSPrvmr2ZfkbnlBOG1iCSwill2NA0/edit#gid=0">Google Sheet</a></h4>
+<h4 class="anchored" data-anchor-id="log-your-resources-on-this-google-sheet">Log your resources on this <a href="https://docs.google.com/spreadsheets/d/1rm7qBrK5ywtd3YYD8J9evxR9EgXlqcK5QNGs8o_lbIY/edit?gid=0#gid=0">Google Sheet</a></h4>
 </section>
 </section>
 <section id="background" class="level2">
@@ -223,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Can you recreate that plot (content, not style wise… you can do way better 🙂)</li>
 </ol>
-<p>Write a quarto document that: - reads the data in (from a local copy on Taylor) - processes the data as needed to be plotted - use ggplot to create a similar (but better looking) plat - comment your code and use markdown text to provide context to your code - render your report as html</p>
+<p>Write a quarto document(s) that: - reads the data in (from a local copy on Workbench-1) - processes the data as needed to be plotted - use ggplot to create a similar (but better looking) plot - comment your code and use markdown text between the code chunks to provide context to your code - render your report as html</p>
 <ol start="2" type="1">
 <li>Ask your own question! You are encouraged to define you own question around this topic as a team</li>
 </ol>
@@ -247,55 +281,26 @@ ul.task-list li input[type="checkbox"] {
 <li>Results</li>
 <li>Main challenges</li>
 </ol>
+<!-- ## Groups 2023 -->
+<!-- | group_name   | github_repo |     slides | -->
+<!-- |-------------|-------------|----------| -->
+<!-- | A1   | <https://github.com/katleyq/A1_GroupProject.git>  | <https://docs.google.com/presentation/d/1MIxRjgidlx6aNrJP_j3NrdGwueftTrKvZMohyeHCO5I/edit?usp=sharing> | -->
+<!-- | got git?     |   <https://github.com/BenVerst/Got-Git>     |  <https://docs.google.com/presentation/d/1Xy1bYJpYrcdP7mRlN-8UuHn8JdGMpaXX08gWgcHOIzo/edit#slide=id.g27a90bb0dba_0_91> | -->
+<!-- | The Brenniacs |  <https://github.com/oksanaprotsukha/thebrenniacs>   | <https://docs.google.com/presentation/d/1Xy1bYJpYrcdP7mRlN-8UuHn8JdGMpaXX08gWgcHOIzo/edit#slide=id.g27a90bb0dba_0_91> | -->
+<!-- | Group Fourk  |   <https://github.com/hmchilders/EDS214_Group4> | <https://docs.google.com/presentation/d/1-Vsyrfgm5CBWHuNI8qwxv7C0wU5s8nVdVAZRFmTTEZE/edit?usp=sharing> | -->
+<!-- | Tropic-Thunder | <https://github.com/saingersoll/tropic-thunder> |   <https://docs.google.com/presentation/d/1548heJAcJN9x8lYXY6uKkh3X2imWDLK9GxKLMNkqnvU/edit?usp=sharing> | -->
+<!-- | Team Siguana | <https://github.com/Vanessa-Salgado/EDS214_group_project_team_siguanaa> | <https://docs.google.com/presentation/d/15Ea1zf39oQlQBq6mOkdQZDI8MJw-MjuEHHdVUFA5Rxw/edit#slide=id.g2798449c7d5_0_10> | -->
+<!-- | SMOL |  <https://github.com/olleholt/SMOL>  |    <https://docs.google.com/presentation/d/1kK2p3mnl_-ar3ZZahE1P1WqYCdvmFPik9CIJAOHSEVE/edit?pli=1#slide=id.p> -->
 </section>
-<section id="groups-2023" class="level2">
-<h2 class="anchored" data-anchor-id="groups-2023">Groups 2023</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>group_name</th>
-<th>github_repo</th>
-<th>slides</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A1</td>
-<td><a href="https://github.com/katleyq/A1_GroupProject.git" class="uri">https://github.com/katleyq/A1_GroupProject.git</a></td>
-<td><a href="https://docs.google.com/presentation/d/1MIxRjgidlx6aNrJP_j3NrdGwueftTrKvZMohyeHCO5I/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1MIxRjgidlx6aNrJP_j3NrdGwueftTrKvZMohyeHCO5I/edit?usp=sharing</a></td>
-</tr>
-<tr class="even">
-<td>got git?</td>
-<td><a href="https://github.com/BenVerst/Got-Git" class="uri">https://github.com/BenVerst/Got-Git</a></td>
-<td><a href="https://docs.google.com/presentation/d/1Xy1bYJpYrcdP7mRlN-8UuHn8JdGMpaXX08gWgcHOIzo/edit#slide=id.g27a90bb0dba_0_91" class="uri">https://docs.google.com/presentation/d/1Xy1bYJpYrcdP7mRlN-8UuHn8JdGMpaXX08gWgcHOIzo/edit#slide=id.g27a90bb0dba_0_91</a></td>
-</tr>
-<tr class="odd">
-<td>The Brenniacs</td>
-<td><a href="https://github.com/oksanaprotsukha/thebrenniacs" class="uri">https://github.com/oksanaprotsukha/thebrenniacs</a></td>
-<td><a href="https://docs.google.com/presentation/d/1Xy1bYJpYrcdP7mRlN-8UuHn8JdGMpaXX08gWgcHOIzo/edit#slide=id.g27a90bb0dba_0_91" class="uri">https://docs.google.com/presentation/d/1Xy1bYJpYrcdP7mRlN-8UuHn8JdGMpaXX08gWgcHOIzo/edit#slide=id.g27a90bb0dba_0_91</a></td>
-</tr>
-<tr class="even">
-<td>Group Fourk</td>
-<td><a href="https://github.com/hmchilders/EDS214_Group4" class="uri">https://github.com/hmchilders/EDS214_Group4</a></td>
-<td><a href="https://docs.google.com/presentation/d/1-Vsyrfgm5CBWHuNI8qwxv7C0wU5s8nVdVAZRFmTTEZE/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1-Vsyrfgm5CBWHuNI8qwxv7C0wU5s8nVdVAZRFmTTEZE/edit?usp=sharing</a></td>
-</tr>
-<tr class="odd">
-<td>Tropic-Thunder</td>
-<td><a href="https://github.com/saingersoll/tropic-thunder" class="uri">https://github.com/saingersoll/tropic-thunder</a></td>
-<td><a href="https://docs.google.com/presentation/d/1548heJAcJN9x8lYXY6uKkh3X2imWDLK9GxKLMNkqnvU/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1548heJAcJN9x8lYXY6uKkh3X2imWDLK9GxKLMNkqnvU/edit?usp=sharing</a></td>
-</tr>
-<tr class="even">
-<td>Team Siguana</td>
-<td><a href="https://github.com/Vanessa-Salgado/EDS214_group_project_team_siguanaa" class="uri">https://github.com/Vanessa-Salgado/EDS214_group_project_team_siguanaa</a></td>
-<td><a href="https://docs.google.com/presentation/d/15Ea1zf39oQlQBq6mOkdQZDI8MJw-MjuEHHdVUFA5Rxw/edit#slide=id.g2798449c7d5_0_10" class="uri">https://docs.google.com/presentation/d/15Ea1zf39oQlQBq6mOkdQZDI8MJw-MjuEHHdVUFA5Rxw/edit#slide=id.g2798449c7d5_0_10</a></td>
-</tr>
-<tr class="odd">
-<td>SMOL</td>
-<td><a href="https://github.com/olleholt/SMOL" class="uri">https://github.com/olleholt/SMOL</a></td>
-<td><a href="https://docs.google.com/presentation/d/1kK2p3mnl_-ar3ZZahE1P1WqYCdvmFPik9CIJAOHSEVE/edit?pli=1#slide=id.p" class="uri">https://docs.google.com/presentation/d/1kK2p3mnl_-ar3ZZahE1P1WqYCdvmFPik9CIJAOHSEVE/edit?pli=1#slide=id.p</a></td>
-</tr>
-</tbody>
-</table>
+<section id="how-to-read-data-from-the-shared-folder" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-data-from-the-shared-folder">How to read data from the shared folder</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="st">"/courses/EDS214/group_project/2023/A1/raw_data"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data_file_rain <span class="ot">&lt;-</span> <span class="st">"BasicFieldData-Rain2.csv"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>data_test <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">file.path</span>(data_path, data_file_rain)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="reference" class="level2">
 <h2 class="anchored" data-anchor-id="reference">Reference</h2>
@@ -354,18 +359,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -397,15 +391,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/brunj7\.github\.io\/EDS-214-analytical-workflows\/");
+      var filterRegex = new RegExp("https:\/\/EDS-214\.github\.io\/EDS-214-analytical-workflows\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EDS214 - Analytical Workflows and Scientific Reproducibility - Flow charts and pseudocode</title>
+<title>Flow charts and pseudocode – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-daily-materials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Daily Materials</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-daily-materials">    
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/brunj7/EDS-214-analytical-workflows" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -143,7 +143,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#flow-charts" id="toc-flow-charts" class="nav-link active" data-scroll-target="#flow-charts">Flow charts</a></li>
+  <li><a href="#planing-things" id="toc-planing-things" class="nav-link active" data-scroll-target="#planing-things">Planing things</a></li>
+  <li><a href="#flow-charts" id="toc-flow-charts" class="nav-link" data-scroll-target="#flow-charts">Flow charts</a></li>
   <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul>
@@ -171,8 +172,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="flow-charts" class="level1">
-<h1>Flow charts</h1>
+<section id="planing-things" class="level2">
+<h2 class="anchored" data-anchor-id="planing-things">Planing things</h2>
+<p><strong>Don’t start implementing nor coding without planning!</strong> It is important to stress that scientists write scripts to help them to investigate scientific question(s). Therefore scripting should not drive our analysis and thinking. We strongly recommend you take the time to plan ahead all the steps you need to conduct your analysis. Developing such a scientific workflow will help you to narrow down the tasks that are needed to move forward your analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/whiteborad_drawings.png" class="img-fluid figure-img"></p>
+<figcaption>Cherubini et al., 2007</figcaption>
+</figure>
+</div>
+</section>
+<section id="flow-charts" class="level2">
+<h2 class="anchored" data-anchor-id="flow-charts">Flow charts</h2>
 <p>Flowcharts are useful to visualize and develop analytical workflow. It guides planning and anticipating the various computing and analytical tasks that will be required to complete an analysis. It also helps explaining the different steps to your collaborators and team. You can use a flowchart to spell out the logic behind a analytical workflow before ever starting to code. It can help to organize big-picture thinking and provide a guide when it comes time to code. More specifically, flowcharts can:</p>
 <ul>
 <li>Visualize the sequence of the different phases of the analytical process from data collection to implementing analyses</li>
@@ -184,8 +195,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The main benefit for the project is the process and discussion as a team to develop the workflow. It will ensure that everybody is on the same page and has the opportunity to provide inputs on the project. This workflow should be updated regularly as the project evolves.</p>
 <p><a href="https://docs.google.com/presentation/d/e/2PACX-1vSEWK0Qrkg7ob-wBLebla5KHJuGCsezV502J1Sc00pZK24CJBFcp-0YOFVP-dtI-l8azsR-1Y5jluiz/pub?start=false&amp;loop=false&amp;delayms=60000">A few workflow examples</a></p>
 </section>
-<section id="pseudocode" class="level1">
-<h1>Pseudocode</h1>
+<section id="pseudocode" class="level2">
+<h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
 <p>Often, programmers may write pseudocode as a next step, to provide greater detail than the flowchart in terms of processing steps and implementation. It will help you to define where iterations will be needed but also detect repeating blocks that might be well suited to be handled via the development of a function.</p>
 <p>This technique aims at developing a sequence of pragrammatical steps in a manner that is easy to understand for anyone with basic programming knowledge. Pseudocode can be implemented more or less formally and at various levels of details. One additional advantage of going through this process is that it is agnostic of the tools / programming languages that you will be using to develop your analytical workflow.</p>
 <p>In this course, we will be focusing on the process more than the exact syntax to use, keeping the level of details at a level that provide more details than a flow chart.</p>
@@ -251,18 +262,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -294,15 +294,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/brunj7\.github\.io\/EDS-214-analytical-workflows\/");
+      var filterRegex = new RegExp("https:\/\/EDS-214\.github\.io\/EDS-214-analytical-workflows\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
