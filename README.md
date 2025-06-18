@@ -6,7 +6,7 @@
 
 # EDS 214: Analytical Workflows and Scientific Reproducibility
 
-This course is taught as part of the Master of Environmental Data Science ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science)), Bren School of Environmental Science & Management, UC Santa Barbara 
+This course was taught from 2021 to 2024 as part of the Master of Environmental Data Science ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science)), Bren School of Environmental Science & Management, UC Santa Barbara 
 
 ## Instructor
 
