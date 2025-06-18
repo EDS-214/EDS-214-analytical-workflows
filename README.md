@@ -14,7 +14,7 @@ This course is taught as part of the Master of Environmental Data Science ([MEDS
 
 ## Course description
 
-The generation and analysis of environmental data is often a complex, multi-step process that may involve the collaboration of many people. Increasingly tools that document help to organize and document workflows are being used to ensure reproducibility and transparency of the results. This course will introduce students to the conceptual organization of workflows as a way to conduct reproducible analyses, as well as various software tools that help users manage multi-step processes that require tools for storing, managing and sharing workflows, code, documents and data.
+The generation and analysis of environmental data is often a complex multi-step process that may involve the collaboration of many people. Increasingly, tools that help to organize and document workflows are being used to ensure reproducibility and transparency of research results. This course will introduce students to the conceptual organization of workflows to conduct reproducible analyses, as well as various software tools that help users manage the multi-step processes required to store, manage, and share code, data, and documentation.
 
 <br>
 <br>
