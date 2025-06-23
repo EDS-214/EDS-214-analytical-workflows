@@ -1,7 +1,5 @@
 
-
 [![DOI](https://zenodo.org/badge/379994626.svg)](https://zenodo.org/doi/10.5281/zenodo.11194410)
-
 
 
 # EDS 214: Analytical Workflows and Scientific Reproducibility
