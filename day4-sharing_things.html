@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,14 +67,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-89fd9a0a543b102b789311c81b1945d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-26c85c300e35e082b5077d1ed9519e91.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,6 +114,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">EDS214 - Analytical Workflows and Scientific Reproducibility</span>
     </a>
@@ -293,11 +296,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="session-info">Session info</h2>
 <p>Your analysis was done with specific versions both of the program used but also of all the packages involved, as well as the specifications of Operating System (OS) that was used. The good use is that there ar tools to let you capture this information in a systematic manner.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 24.04.2 LTS
+Running under: Ubuntu 24.04.3 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -318,27 +321,27 @@ attached base packages:
 loaded via a namespace (and not attached):
  [1] htmlwidgets_1.6.4 compiler_4.3.1    fastmap_1.2.0     cli_3.6.5        
  [5] tools_4.3.1       htmltools_0.5.8.1 yaml_2.3.10       rmarkdown_2.29   
- [9] knitr_1.50        jsonlite_2.0.0    xfun_0.52         digest_0.6.37    
-[13] rlang_1.1.6       evaluate_1.0.4   </code></pre>
+ [9] knitr_1.50        jsonlite_2.0.0    xfun_0.53         digest_0.6.37    
+[13] rlang_1.1.6       evaluate_1.0.5   </code></pre>
 </div>
 </div>
 <p>or even better:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.3.1 (2023-06-16)
- os       Ubuntu 24.04.2 LTS
+ os       Ubuntu 24.04.3 LTS
  system   x86_64, linux-gnu
  ui       X11
  language (EN)
  collate  C.UTF-8
  ctype    C.UTF-8
  tz       UTC
- date     2025-06-23
+ date     2025-09-15
  pandoc   3.1.3 @ /usr/bin/ (via rmarkdown)
- quarto   1.7.32 @ /usr/local/bin/quarto
+ quarto   1.8.24 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date (UTC) lib source
@@ -347,7 +350,7 @@ loaded via a namespace (and not attached):
  devtools      2.4.5   2022-10-11 [1] any (@2.4.5)
  digest        0.6.37  2024-08-19 [1] CRAN (R 4.3.1)
  ellipsis      0.3.2   2021-04-29 [1] CRAN (R 4.3.1)
- evaluate      1.0.4   2025-06-18 [1] CRAN (R 4.3.1)
+ evaluate      1.0.5   2025-08-27 [1] CRAN (R 4.3.1)
  fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.3.1)
  fs            1.6.6   2025-04-12 [1] CRAN (R 4.3.1)
  glue          1.8.0   2024-09-30 [1] CRAN (R 4.3.1)
@@ -356,9 +359,9 @@ loaded via a namespace (and not attached):
  httpuv        1.6.16  2025-04-16 [1] CRAN (R 4.3.1)
  jsonlite      2.0.0   2025-03-27 [1] CRAN (R 4.3.1)
  knitr         1.50    2025-03-16 [1] CRAN (R 4.3.1)
- later         1.4.2   2025-04-08 [1] CRAN (R 4.3.1)
+ later         1.4.4   2025-08-27 [1] CRAN (R 4.3.1)
  lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.3.1)
- magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.3.1)
+ magrittr      2.0.4   2025-09-12 [1] CRAN (R 4.3.1)
  memoise       2.0.1   2021-11-26 [1] CRAN (R 4.3.1)
  mime          0.13    2025-03-17 [1] CRAN (R 4.3.1)
  miniUI        0.1.2   2025-04-17 [1] CRAN (R 4.3.1)
@@ -366,18 +369,18 @@ loaded via a namespace (and not attached):
  pkgload       1.4.0   2024-06-28 [1] CRAN (R 4.3.1)
  profvis       0.4.0   2024-09-20 [1] CRAN (R 4.3.1)
  promises      1.3.3   2025-05-29 [1] CRAN (R 4.3.1)
- purrr         1.0.4   2025-02-05 [1] CRAN (R 4.3.1)
+ purrr         1.1.0   2025-07-10 [1] CRAN (R 4.3.1)
  R6            2.6.1   2025-02-15 [1] CRAN (R 4.3.1)
- Rcpp          1.0.14  2025-01-12 [1] CRAN (R 4.3.1)
+ Rcpp          1.1.0   2025-07-02 [1] CRAN (R 4.3.1)
  remotes       2.5.0   2024-03-17 [1] CRAN (R 4.3.1)
  rlang         1.1.6   2025-04-11 [1] CRAN (R 4.3.1)
  rmarkdown     2.29    2024-11-04 [1] any (@2.29)
  sessioninfo   1.2.3   2025-02-05 [1] CRAN (R 4.3.1)
- shiny         1.10.0  2024-12-14 [1] CRAN (R 4.3.1)
+ shiny         1.11.1  2025-07-03 [1] CRAN (R 4.3.1)
  urlchecker    1.0.1   2021-11-30 [1] CRAN (R 4.3.1)
- usethis       3.1.0   2024-11-26 [1] CRAN (R 4.3.1)
+ usethis       3.2.1   2025-09-06 [1] CRAN (R 4.3.1)
  vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.3.1)
- xfun          0.52    2025-04-02 [1] CRAN (R 4.3.1)
+ xfun          0.53    2025-08-19 [1] CRAN (R 4.3.1)
  xtable        1.8-4   2019-04-21 [1] CRAN (R 4.3.1)
  yaml          2.3.10  2024-07-26 [1] CRAN (R 4.3.1)
 
@@ -421,7 +424,7 @@ loaded via a namespace (and not attached):
 <h2 class="anchored" data-anchor-id="xarigan">Xarigan</h2>
 <p>Xarigan is an R package to create slide deck using R Markdown: <a href="https://github.com/yihui/xaringan" class="uri">https://github.com/yihui/xaringan</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'yihui/xaringan'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'yihui/xaringan'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Here is a good introduction to it: <a href="https://www.favstats.eu/post/xaringan_tut/" class="uri">https://www.favstats.eu/post/xaringan_tut/</a></p>
 </section>
@@ -499,13 +502,14 @@ loaded via a namespace (and not attached):
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

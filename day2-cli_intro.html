@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>git merge conflicts – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
+<title>The Command Line Interface (CLI) – EDS214 - Analytical Workflows and Scientific Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -182,19 +182,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#before-we-start" id="toc-before-we-start" class="nav-link" data-scroll-target="#before-we-start">Before we start</a></li>
-  <li><a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link" data-scroll-target="#merge-conflicts">Merge conflicts</a></li>
-  <li><a href="#how-to-resolve-a-conflict" id="toc-how-to-resolve-a-conflict" class="nav-link" data-scroll-target="#how-to-resolve-a-conflict">How to resolve a conflict</a>
+  <li><a href="#why-the-cli-is-worth-learning" id="toc-why-the-cli-is-worth-learning" class="nav-link active" data-scroll-target="#why-the-cli-is-worth-learning">Why the CLI is worth learning</a></li>
+  <li><a href="#a-little-bit-of-terminology" id="toc-a-little-bit-of-terminology" class="nav-link" data-scroll-target="#a-little-bit-of-terminology">A little bit of terminology</a></li>
+  <li><a href="#the-terminal-from-rstudio" id="toc-the-terminal-from-rstudio" class="nav-link" data-scroll-target="#the-terminal-from-rstudio">The Terminal from RStudio</a></li>
+  <li><a href="#navigating-and-managing-filesdirectories-in-nix" id="toc-navigating-and-managing-filesdirectories-in-nix" class="nav-link" data-scroll-target="#navigating-and-managing-filesdirectories-in-nix">Navigating and managing files/directories in *NIX</a></li>
+  <li><a href="#permissions" id="toc-permissions" class="nav-link" data-scroll-target="#permissions">Permissions</a></li>
+  <li><a href="#general-command-syntax" id="toc-general-command-syntax" class="nav-link" data-scroll-target="#general-command-syntax">General command syntax</a></li>
+  <li><a href="#getting-things-done" id="toc-getting-things-done" class="nav-link" data-scroll-target="#getting-things-done">Getting things done</a>
   <ul class="collapse">
-  <li><a href="#abort-abort-abort" id="toc-abort-abort-abort" class="nav-link" data-scroll-target="#abort-abort-abort">Abort, abort, abort…</a></li>
-  <li><a href="#checkout" id="toc-checkout" class="nav-link" data-scroll-target="#checkout">Checkout</a></li>
-  <li><a href="#pull-and-edit-the-file" id="toc-pull-and-edit-the-file" class="nav-link" data-scroll-target="#pull-and-edit-the-file">Pull and edit the file</a></li>
-  <li><a href="#producing-and-resolving-merge-conflicts" id="toc-producing-and-resolving-merge-conflicts" class="nav-link" data-scroll-target="#producing-and-resolving-merge-conflicts">Producing and resolving merge conflicts</a></li>
+  <li><a href="#some-useful-special-commands-using-the-control-key" id="toc-some-useful-special-commands-using-the-control-key" class="nav-link" data-scroll-target="#some-useful-special-commands-using-the-control-key">Some useful, special commands using the Control key</a></li>
+  <li><a href="#process-management" id="toc-process-management" class="nav-link" data-scroll-target="#process-management">Process management</a></li>
+  <li><a href="#what-about-space" id="toc-what-about-space" class="nav-link" data-scroll-target="#what-about-space">What about “space”</a></li>
+  <li><a href="#existential-questions" id="toc-existential-questions" class="nav-link" data-scroll-target="#existential-questions">Existential questions</a></li>
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a></li>
   </ul></li>
-  <li><a href="#workflows-to-avoid-merge-conflicts" id="toc-workflows-to-avoid-merge-conflicts" class="nav-link" data-scroll-target="#workflows-to-avoid-merge-conflicts">Workflows to avoid merge conflicts</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your turn</a></li>
-  <li><a href="#aknowledgement" id="toc-aknowledgement" class="nav-link" data-scroll-target="#aknowledgement">Aknowledgement</a></li>
+  <li><a href="#a-sampling-of-simple-commands-for-dealing-with-files" id="toc-a-sampling-of-simple-commands-for-dealing-with-files" class="nav-link" data-scroll-target="#a-sampling-of-simple-commands-for-dealing-with-files">A sampling of simple commands for dealing with files</a></li>
+  <li><a href="#get-into-the-flow-with-pipes" id="toc-get-into-the-flow-with-pipes" class="nav-link" data-scroll-target="#get-into-the-flow-with-pipes">Get into the flow, with pipes</a></li>
+  <li><a href="#cli-practice" id="toc-cli-practice" class="nav-link" data-scroll-target="#cli-practice"><strong>CLI Practice</strong></a></li>
+  <li><a href="#bonuses" id="toc-bonuses" class="nav-link" data-scroll-target="#bonuses">Bonuses</a>
+  <ul class="collapse">
+  <li><a href="#hear-more-about-the-unix-revolution-directly-from-its-creators" id="toc-hear-more-about-the-unix-revolution-directly-from-its-creators" class="nav-link" data-scroll-target="#hear-more-about-the-unix-revolution-directly-from-its-creators">Hear more about the unix revolution directly from its creators</a></li>
+  <li><a href="#vim-text-editor" id="toc-vim-text-editor" class="nav-link" data-scroll-target="#vim-text-editor">Vim text editor</a></li>
+  </ul></li>
+  <li><a href="#advanced-cli" id="toc-advanced-cli" class="nav-link" data-scroll-target="#advanced-cli">Advanced CLI</a></li>
+  <li><a href="#aknowledgements" id="toc-aknowledgements" class="nav-link" data-scroll-target="#aknowledgements">Aknowledgements</a></li>
   </ul>
 </nav>
     </div>
@@ -203,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">git merge conflicts</h1>
+<h1 class="title">The Command Line Interface (CLI)</h1>
 </div>
 
 
@@ -220,160 +231,279 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>In this lesson, you will learn:</p>
+<p>The CLI provides a direct way to interact with the Operating System, by typing in commands.</p>
+<section id="why-the-cli-is-worth-learning" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-cli-is-worth-learning">Why the CLI is worth learning</h3>
 <ul>
-<li>What typically causes conflicts when collaborating</li>
-<li>Workflows to avoid conflicts</li>
-<li>How to resolve a conflict</li>
+<li>Might be the only interface you have to a High Performance Computer (HPC)</li>
+<li>Command statements can be reused easily and saved as scripts</li>
+<li>Easier automation and text files manipulation</li>
 </ul>
 </section>
-<section id="before-we-start" class="level2">
-<h2 class="anchored" data-anchor-id="before-we-start">Before we start</h2>
-<p>First thing to know is that actually <code>git pull</code> is a two step process: <code>git pull = git fetch + git merge</code></p>
-<p>Second: <strong>you did nothing wrong!!</strong> Git tries to merge files automatically. When the changes are on the same file far apart, git will figure it out on his own and do the merge automatically. However if changes are overlapping, <code>git</code> will call you to the rescue and ask you how to best merge the two versions.</p>
-</section>
-<section id="merge-conflicts" class="level2">
-<h2 class="anchored" data-anchor-id="merge-conflicts">Merge conflicts</h2>
-<p>So things can go wrong, which usually starts with a <strong>merge conflict</strong>, due to both collaborators making incompatible changes to a file. While the error messages from merge conflicts can be daunting, getting things back to a normal state can be straightforward once you’ve got an idea where the problem lies.</p>
-<p>This is most <strong>easily avoided by good communication about who is working on various sections of each file, and trying to avoid overlaps</strong>. But sometimes it happens, and <em>git</em> is there to warn you about potential problems. And git will not allow you to overwrite one person’s changes to a file with another’s changes to the same file if they were based on the same version.</p>
-<p><img src="img/git-conflict-00-lines-changed.png" class="img-fluid"></p>
-<p>The main problem with merge conflicts is that, when the Owner and Collaborator both make changes to the same line of a file, git doesn’t know whose changes take precedence. You have to tell git whose changes to use for that line.</p>
-</section>
-<section id="how-to-resolve-a-conflict" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-resolve-a-conflict">How to resolve a conflict</h2>
-<section id="abort-abort-abort" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="abort-abort-abort">Abort, abort, abort…</h3>
-<p>Sometimes you just made a mistake. When you get a merge conflict, the repository is placed in a ‘Merging’ state until you resolve it. There’s a command line command to abort doing the merge altogether:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--abort</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Of course, after doing that you still haven’t synced with your collaborator’s changes, so things are still unresolved. But at least your repository is now usable on your local machine.</p>
-</section>
-<section id="checkout" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="checkout">Checkout</h3>
-<p>The simplest way to resolve a conflict, given that you know whose version of the file you want to keep, is to use the command line <code>git</code> program to tell git to use either <em>your</em> changes (the person doing the merge), or <em>their</em> changes (the other collaborator).</p>
+<section id="a-little-bit-of-terminology" class="level3">
+<h3 class="anchored" data-anchor-id="a-little-bit-of-terminology">A little bit of terminology</h3>
 <ul>
-<li>keep your collaborators file: <code>git checkout --theirs conflicted_file.Rmd</code></li>
-<li>keep your own file: <code>git checkout --ours conflicted_file.Rmd</code></li>
+<li><code>Command Line Interface (CLI)</code>: This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, …)</li>
+<li><code>Terminal</code>: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer</li>
+<li><code>Shell</code>: It is the program that runs the command line. There are many different shells, the most common being <code>bash</code> (Bourne Again SHell) which is installed by default in many Linux distributions</li>
 </ul>
-<p>Once you have run that command, then run <code>add</code>, <code>commit</code>, and <code>push</code> the changes as normal.</p>
-</section>
-<section id="pull-and-edit-the-file" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="pull-and-edit-the-file">Pull and edit the file</h3>
-<p>But that requires the command line. If you want to resolve from RStudio, or if you want to pick and choose some of your changes and some of your collaborator’s, then instead you can manually edit and fix the file. When you <code>pull</code>ed the file with a conflict, git notices that there is a conflict and modifies the file to show both your own changes and your collaborator’s changes in the file. It also shows the file in the Git tab with an orange <code>U</code> icon, which indicates that the file is <code>Unmerged</code>, and therefore awaiting you help to resolve the conflict. It delimits these blocks with a series of less than and greater than signs, so they are easy to find:</p>
-<p><img src="img/rstudio-merge-conflict.png" class="img-fluid"></p>
-<p>To resolve the conficts, simply find all of these blocks, and edit them so that the file looks how you want (either pick your lines, your collaborators lines, some combination, or something altogether new), and save. Be sure you removed the delimiter lines that started with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</p>
-<p>Once you have made those changes, you simply add, commit, and push the files to resolve the conflict.</p>
-</section>
-<section id="producing-and-resolving-merge-conflicts" class="level3">
-<h3 class="anchored" data-anchor-id="producing-and-resolving-merge-conflicts">Producing and resolving merge conflicts</h3>
-<p>To illustrate this process, we’re going to carefully create a merge conflict step by step, show how to resolve it, and show how to see the results of the successful merge after it is complete. First, we will walk through the exercise to demonstrate the issues.</p>
-<section id="owner-and-collaborator-ensure-all-changes-are-updated" class="level4">
-<h4 class="anchored" data-anchor-id="owner-and-collaborator-ensure-all-changes-are-updated">Owner and collaborator ensure all changes are updated</h4>
-<p>First, start the exercise by ensuring that both the Owner and Collaborator have all of the changes synced to their local copies of the Owner’s repositoriy in RStudio. This includes doing a <code>git pull</code> to ensure that you have all changes local, and make sure that the Git tab in RStudio doesn’t show any changes needing to be committed.</p>
-</section>
-<section id="owner-makes-a-change-and-commits" class="level4">
-<h4 class="anchored" data-anchor-id="owner-makes-a-change-and-commits">Owner makes a change and commits</h4>
-<p>From that clean slate, the Owner first modifies and commits a small change inlcuding their name on a specific line of the README.md file (we will change line 4). Work to only change that one line, and add your username to the line in some form and commit the changes (but DO NOT push). We are now in the situation where the owner has unpushed changes that the collaborator can not yet see.</p>
-</section>
-<section id="collaborator-makes-a-change-and-commits-on-the-same-line" class="level4">
-<h4 class="anchored" data-anchor-id="collaborator-makes-a-change-and-commits-on-the-same-line">Collaborator makes a change and commits <strong>on the same line</strong></h4>
-<p>Now the collaborator also makes changes to the same of the README.md file in their RStudio copy of the project, adding their name to the line. They then commit. At this point, both the owner and collaborator have committed changes based on their shared version of the README.md file, but neither has tried to share their changes via GitHub.</p>
-</section>
-<section id="collaborator-pushes-the-file-to-github" class="level4">
-<h4 class="anchored" data-anchor-id="collaborator-pushes-the-file-to-github">Collaborator pushes the file to GitHub</h4>
-<p>Sharing starts when the Collaborator pushes their changes to the GitHub repo, which updates GitHub to their version of the file. The owner is now one revision behind, but doesn’t yet know it.</p>
-</section>
-<section id="owner-pushes-their-changes-and-gets-an-error" class="level4">
-<h4 class="anchored" data-anchor-id="owner-pushes-their-changes-and-gets-an-error">Owner pushes their changes and gets an error</h4>
-<p>At this point, the owner tries to push their change to the repository, which triggers an error from GitHub. While the error message is long, it basically tells you everything needed (that the owner’s repository doesn’t reflect the changes on GitHub, and that they need to <em>pull</em> before they can push).</p>
-<p><img src="img/git-conflict-01-push-error.png" class="img-fluid"></p>
-</section>
-<section id="owner-pulls-from-github-to-get-collaborator-changes" class="level4">
-<h4 class="anchored" data-anchor-id="owner-pulls-from-github-to-get-collaborator-changes">Owner pulls from GitHub to get Collaborator changes</h4>
-<p>Doing what the message says, the Owner pulls the changes from GitHub, and gets another, different error message. In this case, it indicates that there is a merge conflict because of the conflicting lines.</p>
-<p><img src="img/git-conflict-02-pull-error.png" class="img-fluid"></p>
-<p>In the Git pane of RStudio, the file is also flagged with an orange ‘U’, which stands for an unresolved merge conflict.</p>
-<p><img src="img/git-conflict-03-conflict.png" class="img-fluid"></p>
-</section>
-<section id="owner-edits-the-file-to-resolve-the-conflict" class="level4">
-<h4 class="anchored" data-anchor-id="owner-edits-the-file-to-resolve-the-conflict">Owner edits the file to resolve the conflict</h4>
-<p>To resolve the conflict, the Owner now needs to edit the file. Again, as indicated above, git has flagged the locations in the file where a conflict occcurred with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. The Owner should edit the file, merging whatever changes are appropriate until the conflicting lines read how they should, and eliminate all of the marker lines with with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</p>
-<p><img src="img/git-conflict-04-conflict-tags.png" class="img-fluid"></p>
-<p>Of course, for scripts and programs, resolving the changes means more than just merging the text – whoever is doing the merging should make sure that the code runs properly and none of the logic of the program has been broken.</p>
-<p><img src="img/git-conflict-05-resolved-file.png" class="img-fluid"></p>
-</section>
-<section id="owner-commits-the-resolved-changes" class="level4">
-<h4 class="anchored" data-anchor-id="owner-commits-the-resolved-changes">Owner commits the resolved changes</h4>
-<p>From this point forward, things proceed as normal. The owner first ‘Adds’ the file changes to be made, which changes the orange <code>U</code> to a blue <code>M</code> for modified, and then commits the changes locally. The owner now has a resolved version of the file on their system.</p>
-<p><img src="img/git-conflict-06-commit-resolved.png" class="img-fluid"></p>
-</section>
-<section id="owner-pushes-the-resolved-changes-to-github" class="level4">
-<h4 class="anchored" data-anchor-id="owner-pushes-the-resolved-changes-to-github">Owner pushes the resolved changes to GitHub</h4>
-<p>Have the Owner push the changes, and it should replicate the changes to GitHub without error.</p>
-<p><img src="img/git-conflict-07-push-resolved.png" class="img-fluid"></p>
-</section>
-<section id="collaborator-pulls-the-resolved-changes-from-github" class="level4">
-<h4 class="anchored" data-anchor-id="collaborator-pulls-the-resolved-changes-from-github">Collaborator pulls the resolved changes from GitHub</h4>
-<p>Finally, the Collaborator can pull from GitHub to get the changes the owner made.</p>
-</section>
-<section id="both-can-view-commit-history" class="level4">
-<h4 class="anchored" data-anchor-id="both-can-view-commit-history">Both can view commit history</h4>
-<p>When either the Collaborator or the Owner view the history, the conflict, associated branch, and the merged changes are clearly visible in the history.</p>
-<p><img src="img/git-conflict-08-history.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Merge Conflict Challenge
+<span class="screen-reader-only">Tip</span>The pitch
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Now it’s your turn. In pairs, intentionally create a merge conflict, and then go through the steps needed to resolve the issues and continue developing with the merged files. See the sections above for help with each of these steps:</p>
-<ul>
-<li>Step 0: Owner and collaborator ensure all changes are updated</li>
-<li>Step 1: Owner makes a change and commits</li>
-<li>Step 2: Collaborator makes a change and commits <strong>on the same line</strong></li>
-<li>Step 3: Collaborator pushes the file to GitHub</li>
-<li>Step 4: Owner pushes their changes and gets an error</li>
-<li>Step 5: Owner pulls from GitHub to get Collaborator changes</li>
-<li>Step 6: Owner edits the file to resolve the conflict</li>
-<li>Step 7: Owner commits the resolved changes</li>
-<li>Step 8: Owner pushes the resolved changes to GitHub</li>
-<li>Step 9: Collaborator pulls the resolved changes from GitHub</li>
-<li>Step 10: Both can view commit history</li>
-</ul>
+<p><strong>Not convinced? Check this out: <a href="https://eds-214.github.io/eds214-handson-cli/cli-pitch.html">the CLI pitch</a></strong></p>
 </div>
 </div>
 </section>
+<section id="the-terminal-from-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="the-terminal-from-rstudio">The Terminal from RStudio</h3>
+<p>You can access the command line directly from RStudio by using the <code>Terminal</code> tab next to your R console.</p>
+<p><img src="img/rstudio-terminal.png" class="img-fluid"></p>
 </section>
-</section>
-<section id="workflows-to-avoid-merge-conflicts" class="level2">
-<h2 class="anchored" data-anchor-id="workflows-to-avoid-merge-conflicts">Workflows to avoid merge conflicts</h2>
-<p>Some basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:</p>
+<section id="navigating-and-managing-filesdirectories-in-nix" class="level3">
+<h3 class="anchored" data-anchor-id="navigating-and-managing-filesdirectories-in-nix">Navigating and managing files/directories in *NIX</h3>
+<p><img src="img/unix_filetree.gif" class="img-fluid"></p>
 <ul>
-<li>Communicate often</li>
-<li>Tell each other what you are working on</li>
-<li>Pull immediately before you commit or push</li>
-<li>Commit often in small chunks.</li>
+<li><code>pwd</code>: Know where you are</li>
+<li><code>ls</code>: List the content of the directory</li>
+<li><code>cd</code>: Go inside a directory</li>
 </ul>
-<p><strong>Always start your working sessions with a pull</strong> to get any outstanding changes, then start doing your editing and work. Stage your changes, but before you commit, Pull again to see if any new changes have arrived. If so, they should merge in easily if you are working in different parts of the program. You can then Commit and immediately Push your changes safely. Good luck, and try to not get frustrated. Once you figure out how to handle merge conflicts, they can be avoided or dispatched when they occur, but it does take a bit of practice.</p>
+<p>Some pseudo directory names. Wherever you are:</p>
+<ul>
+<li><code>~</code> : Home directory</li>
+<li><code>.</code> : Here (current directory)</li>
+<li><code>..</code>: Up one level (upper directory)</li>
+</ul>
+<p>Let’s put this into action:</p>
+<ul>
+<li>go to my “Home” directory: <code>cd ~</code></li>
+<li>go up one directory level: <code>cd ..</code></li>
+<li>list the content: <code>ls</code></li>
+<li>list the content showing hidden files: <code>ls -a</code> note that <code>-a</code> is referred as an option (modifies the command)</li>
+</ul>
+<p>More files/directories manipulations:</p>
+<ul>
+<li><code>mkdir</code>: Create a directory</li>
+<li><code>cp</code>: Copy a file</li>
+<li><code>mv</code>: Move a file <strong>it is also how you rename a file!</strong></li>
+<li><code>rm</code> / <code>rmdir</code>: Remove a file / directory <strong>use those carefully, there is no return / Trash!!</strong></li>
+</ul>
+<p><strong>Note: typing is not your thing? the <code>&lt;tab&gt;</code> key is your friend!</strong> One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.</p>
+</section>
+<section id="permissions" class="level3">
+<h3 class="anchored" data-anchor-id="permissions">Permissions</h3>
+<p>All files have permissions and ownership.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/UnixFileLongFormat.png" class="img-fluid figure-img"></p>
+<figcaption>File permissions</figcaption>
+</figure>
+</div>
+<ul>
+<li>List files showing ownership and permissions: <code>ls -l</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brun@workbench-1:/courses/EDS214$</span> ls <span class="at">-l</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 16</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxrwxr-x+</span> 3 brun      esmdomainusers 4096 Aug 20 04:49 data</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxrwxr-x+</span> 2 katherine esmdomainusers 4096 Aug 18 18:32 example    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can change those permissions:</p>
+<ul>
+<li>Change permissions: <code>chmod</code></li>
+<li>Change ownership: <code>chown</code></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Clear contents in terminal window: <code>clear</code></p>
+</div>
+</div>
+</section>
+<section id="general-command-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="general-command-syntax">General command syntax</h2>
+<ul>
+<li><code>command [options] [arguments]</code></li>
+</ul>
+<p>where <code>command</code> must be an <em>executable</em> file on your <code>PATH</code> * <code>echo $PATH</code></p>
+<p>and <code>options</code> can usually take two forms * short form: <code>-a</code> * long form: <code>--all</code></p>
+<p>You can combine the options:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-ltrh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>What do these options do?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> ls</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>hit <code>spacebar</code> to get to the next page of the manual hit <code>q</code> to exit the help</p>
+</div>
+</div>
+</section>
+<section id="getting-things-done" class="level2">
+<h2 class="anchored" data-anchor-id="getting-things-done">Getting things done</h2>
+<section id="some-useful-special-commands-using-the-control-key" class="level3">
+<h3 class="anchored" data-anchor-id="some-useful-special-commands-using-the-control-key">Some useful, special commands using the Control key</h3>
+<ul>
+<li>Cancel (abort) a command: <code>Ctrl-c</code> Note: very different than Windows!!</li>
+<li>Stop (suspend) a command: <code>Ctrl-z</code></li>
+<li><code>Ctrl-z</code> can be used to suspend, then background a process</li>
+</ul>
+</section>
+<section id="process-management" class="level3">
+<h3 class="anchored" data-anchor-id="process-management">Process management</h3>
+<ul>
+<li>Like Windows Task Manager, OSX Activity Monitor</li>
+<li><strong><code>top</code></strong>, <code>ps</code>, <code>jobs</code> (hit <code>q</code> to get out!)</li>
+<li><code>kill</code> to delete an unwanted job or process</li>
+<li>Foreground and background: <code>&amp;</code></li>
+</ul>
+</section>
+<section id="what-about-space" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-space">What about “space”</h3>
+<ul>
+<li>How much storage is available on this system? <code>df -h</code></li>
+<li>How much storage am “I” using overall? <code>du -hs &lt;folder&gt;</code></li>
+<li>How much storage am “I” using, by sub directory? <code>du -h &lt;folder&gt;</code></li>
+<li>How much RAM is used? <code>free -h</code></li>
+</ul>
+</section>
+<section id="existential-questions" class="level3">
+<h3 class="anchored" data-anchor-id="existential-questions">Existential questions</h3>
+<ul>
+<li>What is your username? <code>whoami</code></li>
+<li>What is today’s date? <code>date</code></li>
+<li>Where are the programs you are using? <code>whereis R</code> also try <code>which -a python</code></li>
+<li>What is the kernel version of your OS: <code>uname -a</code></li>
+<li>How long since last reboot: <code>uptime</code></li>
+<li>Which shell are you using? <code>echo $0</code></li>
+</ul>
+</section>
+<section id="history" class="level3">
+<h3 class="anchored" data-anchor-id="history">History</h3>
+<ul>
+<li>See your command history: <code>history</code></li>
+<li>Re-run last command: <code>!!</code></li>
+<li>Re-run 32th command: <code>!32</code></li>
+<li>Re-run 5th from last command: <code>!-5</code></li>
+<li>Re-run last command that started with ‘c’: <code>!c</code></li>
+</ul>
+</section>
+</section>
+<section id="a-sampling-of-simple-commands-for-dealing-with-files" class="level2">
+<h2 class="anchored" data-anchor-id="a-sampling-of-simple-commands-for-dealing-with-files">A sampling of simple commands for dealing with files</h2>
+<ul>
+<li><code>wc</code> count lines, words, and/or characters</li>
+<li><code>diff</code> compare two files for differences</li>
+<li><code>sort</code> sort lines in a file</li>
+<li><code>uniq</code> report or filter out repeated lines in a file</li>
+</ul>
+</section>
+<section id="get-into-the-flow-with-pipes" class="level2">
+<h2 class="anchored" data-anchor-id="get-into-the-flow-with-pipes">Get into the flow, with pipes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/pipe_split.png" title="http://www.ucblueash.edu/thomas/Intro_Unix_Text/Images/pipe_split.png" class="img-fluid figure-img"></p>
+<figcaption><code>stdin</code>, <code>stdout</code>, <code>stderr</code></figcaption>
+</figure>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> <span class="pp">*</span>.TXT </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> <span class="pp">*</span>.TXT <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="{callout-tip}">
+<ul>
+<li>note use of <code>*</code> as character wildcard for zero or more matches (same in Mac and Windows)</li>
+<li><code>?</code> matches single character;</li>
+</ul>
+</div>
+<p>Here the <code>wc -l</code> command, which counts the number of lines in files, is given file names on the command line, so it counts the lines in those files. It writes its output to stdout. <code>sort -n</code> sorts lines in files. It was given no files to sort, so it sorts whatever lines come in via stdin. By piping these together (i.e., by hooking <code>wc</code>’s stdout to <code>sort</code>’s stdin using the pipe operator), the output from <code>wc -l</code> is thereby sorted.</p>
+<p>There are various operators for redirecting where stdin comes from and where stdout and stderr go:</p>
+<ul>
+<li><code>&lt; file</code>: read stdin from file</li>
+<li><code>&gt; file</code>: write stdout to file</li>
+<li><code>2&gt; file</code>: write stderr to file</li>
+<li><code>&gt;&amp; file</code>: write both stdout and stderr to file</li>
+<li><code>&gt;&gt; file</code>: append stdout to file</li>
+</ul>
+<p>Let’s write the above result to a file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> <span class="pp">*</span>.TXT <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="op">&gt;</span> csvcount.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Caution: except for <code>&gt;&gt;</code>, all forms of <code>&gt;</code> are destructive: Bash overwrites any existing file with an empty file before the program is run.</p>
+<p>Want to get rid of output you don’t want to see? Use the Unix black hole: <code>&gt;&amp; /dev/null</code>. (This is a cultural meme, you’ll see it on T-shirts and license plates.)</p>
+<p>The above are the main redirections, but there are others.</p>
+<p><strong>To end a session, simply type <code>exit</code> or <code>logout</code> into the command line</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Setting git on workbench-1 (if not yet done)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>At the <strong>Terminal</strong>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Jane Doe"</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email janedoe@example.com</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'cache --timeout=10000000'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="setting-github-token-on-workbench-1" class="level3">
+<h3 class="anchored" data-anchor-id="setting-github-token-on-workbench-1">Setting GitHub token on workbench-1</h3>
+<p>At the <strong>R Console</strong>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On your laptop</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>() <span class="co"># This should open a web browser on GitHub</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># On workbench-1 </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="cli-practice" class="level2">
+<h2 class="anchored" data-anchor-id="cli-practice"><a href="https://github.com/EDS-214/eds214-handson-cli" target="_blank"><strong>CLI Practice</strong></a></h2>
 <hr>
 </section>
-<section id="your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
-<ul>
-<li>Use your favorite desserts to create a merge conflict. Resolve it using RStudio</li>
-<li>Mixing the fun: try to create a merge conflict using the forking workflow. How would you do this? Try to resolve the conflict on the GitHub website! <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">hint</a></li>
-</ul>
-<hr>
+<section id="bonuses" class="level2">
+<h2 class="anchored" data-anchor-id="bonuses">Bonuses</h2>
+<section id="hear-more-about-the-unix-revolution-directly-from-its-creators" class="level3">
+<h3 class="anchored" data-anchor-id="hear-more-about-the-unix-revolution-directly-from-its-creators">Hear more about the unix revolution directly from its creators</h3>
+<p><a href="https://www.youtube.com/watch?v=tc4ROCJYbm0" class="uri">https://www.youtube.com/watch?v=tc4ROCJYbm0</a></p>
 </section>
-<section id="aknowledgement" class="level1">
-<h1>Aknowledgement</h1>
-<p>This section had been adapted from <a href="https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html">NCEAS Reproducible Research Techniques for Synthesis</a></p>
-<p>Individual units were created by (in alphabetical order): Julien Brun, Amber Budden, Jeanette Clark, Matt Jones, Erin McLean, Bryce Mecum, William Michener.</p>
+<section id="vim-text-editor" class="level3">
+<h3 class="anchored" data-anchor-id="vim-text-editor">Vim text editor</h3>
+<p>This section is optional depending of our progress and interest. Vim is still the default text editor on many Linux distribution and it is good to know about its basics.</p>
+<p><a href="vim.html">Vim</a></p>
+</section>
+</section>
+<section id="advanced-cli" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-cli">Advanced CLI</h2>
+<p>Want to know more cool tools your can use: <a href="day2-cli_advanced.html"><strong>CLI Advanced</strong></a></p>
+</section>
+<section id="aknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="aknowledgements">Aknowledgements</h2>
+<p>This section reuses materials from <a href="https://learning.nceas.ucsb.edu/">NCEAS Open Science for Synthesis (OSS)</a> intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 <a href="https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-class-data/blob/main/week5/bash-essentials.md">10 bash essentials</a> developed by Greg Janée</p>
 
 
 </section>
