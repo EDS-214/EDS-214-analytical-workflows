@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 | **Time (PST)**    | **Activity**                                       |
 |-------------------|----------------------------------------------------|
-| 10:00am - 10:50am | *Lecture 1: [Working on a remote server Server](day2-remote_server.html){target="_blank"} & Introduction to the Command Line Interface (day2-cli_intro.html){target="_blank"} (50 min)* |
+| 10:00am - 10:50am | *Lecture 1: [Working on a remote server Server](day2-remote_server.html){target="_blank"} & [Introduction to the Command Line Interface](day2-cli_intro.html){target="_blank"} (50 min)* |
 | 10:50am - 11:00am | *Break (10 min)*                                   |
 | 11:00am - 12:30am | *Interactive session 1: [Command line Interface](https://github.com/EDS-214/eds214-handson-cli){target="_blank"}  (50 min)* |
 | 12:30pm - 1:30pm  | *Lunch (60 min)*                                   |
