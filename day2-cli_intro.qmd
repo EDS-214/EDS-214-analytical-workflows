@@ -1,0 +1,284 @@
+---
+title: "The Command Line Interface (CLI)"
+---
+
+
+The CLI provides a direct way to interact with the Operating System, by typing in commands. 
+
+### Why the CLI is worth learning
+
+* Might be the only interface you have to a High Performance Computer (HPC)
+* Command statements can be reused easily and saved as scripts
+* Easier automation and text files manipulation
+
+      
+### A little bit of terminology
+
+- `Command Line Interface (CLI)`: This is a user interface that lets you interact with a computer. It is a legacy from the early days of computers. Now a days computers have graphical user interfaces instead (MacOSX, Windows, Linux, ...) 
+- `Terminal`: It is a an application that lets you run a command line interface. It used to be a physical machine connected to a mainframe computer
+- `Shell`: It is the program that runs the command line. There are many different shells, the most common being `bash` (Bourne Again SHell) which is installed by default in many Linux distributions
+
+::: {.callout-tip}
+### The pitch
+
+**Not convinced? Check this out: [the CLI pitch](https://eds-214.github.io/eds214-handson-cli/cli-pitch.html)**
+:::
+
+### The Terminal from RStudio
+
+You can access the command line directly from RStudio by using the `Terminal` tab next to your R console.
+
+![](img/rstudio-terminal.png)
+
+### Navigating and managing files/directories in *NIX
+
+
+![](img/unix_filetree.gif)
+
+
+* `pwd`: Know where you are
+* `ls`: List the content of the directory
+* `cd`: Go inside a directory
+
+Some pseudo directory names. Wherever you are:
+
+* `~` : Home directory
+* `.` : Here (current directory)
+* `..`: Up one level (upper directory)
+
+Let's put this into action: 
+
+* go to my "Home" directory:  `cd ~`
+* go up one directory level: `cd ..`
+* list the content: `ls`
+* list the content showing hidden files: `ls -a`  note that `-a` is referred as an option (modifies the command)
+ 
+More files/directories manipulations:
+
+* `mkdir`: Create a directory
+* `cp`: Copy a file
+* `mv`: Move a file  **it is also how you rename a file!**
+* `rm` / `rmdir`: Remove a file / directory  **use those carefully, there is no return / Trash!!**
+
+
+**Note: typing is not your thing? the `<tab>` key is your friend!** One hit it will auto-complete the file/directory/path name for you. If there are many options, hit it twice to see the options.
+
+
+### Permissions
+
+All files have permissions and ownership.
+
+![File permissions](img/UnixFileLongFormat.png)
+
+* List files showing ownership and permissions: `ls -l`
+
+```bash
+brun@workbench-1:/courses/EDS214$ ls -l
+total 16
+drwxrwxr-x+ 3 brun      esmdomainusers 4096 Aug 20 04:49 data
+drwxrwxr-x+ 2 katherine esmdomainusers 4096 Aug 18 18:32 example	
+```
+
+You can change those permissions:
+
+* Change permissions: `chmod`
+* Change ownership: `chown`
+
+
+::: {.callout-tip}
+Clear contents in terminal window: `clear`
+:::
+
+
+## General command syntax
+
+* `command [options] [arguments]`
+
+where `command` must be an _executable_ file on your `PATH`
+* `echo $PATH`
+
+and `options` can usually take two forms
+* short form: `-a`
+* long form: `--all`
+
+You can combine the options:
+
+```bash
+ls -ltrh
+```
+
+What do these options do?
+
+```bash
+man ls
+```
+
+::: {.callout-tip}
+hit `spacebar` to get to the next page of the manual
+hit `q` to exit the help
+:::
+
+## Getting things done
+
+### Some useful, special commands using the Control key
+
+* Cancel (abort) a command: `Ctrl-c`  Note: very different than Windows!!
+* Stop (suspend) a command: `Ctrl-z`
+* `Ctrl-z` can be used to suspend, then background a process
+
+
+### Process management
+
+* Like Windows Task Manager, OSX Activity Monitor
+* **`top`**, `ps`, `jobs` (hit `q` to get out!)
+* `kill` to delete an unwanted job or process
+* Foreground and background: `&`
+
+
+### What about "space"
+
+* How much storage is available on this system?  `df -h`
+* How much storage am "I" using overall?  `du -hs <folder>`
+* How much storage am "I" using, by sub directory?  `du -h <folder>`
+* How much RAM is used?  `free -h`
+
+
+### Existential questions
+
+* What is your username?  `whoami`
+* What is today's date?  `date`
+* Where are the programs you are using?   `whereis R` also try `which -a python`
+* What is the kernel version of your OS:  `uname -a`
+* How long since last reboot: `uptime`
+* Which shell are you using? `echo $0`
+
+
+
+### History
+
+* See your command history:  `history`
+* Re-run last command:  `!!`
+* Re-run 32th command: `!32`
+* Re-run 5th from last command: `!-5`
+* Re-run last command that started with 'c': `!c`
+
+
+## A sampling of simple commands for dealing with files
+
+* `wc` count lines, words, and/or characters
+* `diff` compare two files for differences
+* `sort` sort lines in a file
+* `uniq` report or filter out repeated lines in a file
+
+
+## Get into the flow, with pipes 
+
+![`stdin`, `stdout`, `stderr`](img/pipe_split.png
+    "http://www.ucblueash.edu/thomas/Intro_Unix_Text/Images/pipe_split.png")
+
+
+```bash
+wc -l *.TXT 
+wc -l *.TXT | sort -n
+```
+
+:::{callout-tip}
+- note use of `*` as character wildcard for zero or more matches (same in Mac and Windows)
+- `?` matches single character;
+:::
+
+
+Here the `wc -l` command, which counts the number of lines in files,
+is given file names on the command line, so it counts the lines in
+those files.  It writes its output to stdout.  `sort -n` sorts lines
+in files.  It was given no files to sort, so it sorts whatever lines
+come in via stdin.  By piping these together (i.e., by hooking `wc`'s
+stdout to `sort`'s stdin using the pipe operator), the output from `wc
+-l` is thereby sorted.
+
+There are various operators for redirecting where stdin comes from and
+where stdout and stderr go:
+
+- `< file`: read stdin from file
+- `> file`: write stdout to file
+- `2> file`: write stderr to file
+- `>& file`: write both stdout and stderr to file
+- `>> file`: append stdout to file
+
+
+Let's write the above result to a file:
+
+```bash
+wc -l *.TXT | sort -n > csvcount.log
+```
+
+Caution: except for `>>`, all forms of `>` are destructive: Bash
+overwrites any existing file with an empty file before the program is
+run.
+
+Want to get rid of output you don't want to see?  Use the Unix black
+hole: `>& /dev/null`.  (This is a cultural meme, you'll see it on
+T-shirts and license plates.)
+
+The above are the main redirections, but there are others.
+
+**To end a session, simply type `exit` or `logout` into the command line**
+
+
+
+
+::: {.callout-note collapse=false}
+### Setting git on workbench-1 (if not yet done)
+
+At the **Terminal**:
+
+```{bash, eval=FALSE, echo=TRUE}
+git config --global user.name "Jane Doe" 
+git config --global user.email janedoe@example.com
+git config --global credential.helper 'cache --timeout=10000000'
+git config --list
+``` 
+
+### Setting GitHub token on workbench-1
+
+At the **R Console**:
+
+```{r, eval=FALSE, echo=TRUE}
+# On your laptop
+usethis::create_github_token() # This should open a web browser on GitHub
+
+# On workbench-1 
+gitcreds::gitcreds_set()
+usethis::git_sitrep()
+```
+
+:::
+
+
+## [**CLI Practice**](https://github.com/EDS-214/eds214-handson-cli){target="_blank"}
+
+--- 
+
+
+## Bonuses
+
+### Hear more about the unix revolution directly from its creators
+
+<https://www.youtube.com/watch?v=tc4ROCJYbm0>
+
+
+### Vim text editor
+
+This section is optional depending of our progress and interest. Vim is still the default text editor on many Linux distribution and it is good to know about its basics.
+
+[Vim](vim.html)
+
+
+## Advanced CLI
+
+Want to know more cool tools your can use: [**CLI Advanced**](day2-cli_advanced.html)
+
+
+## Aknowledgements
+
+This section reuses materials from [NCEAS Open Science for Synthesis (OSS)](https://learning.nceas.ucsb.edu/) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others; and from EDS-213 [10 bash essentials](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-class-data/blob/main/week5/bash-essentials.md) developed by Greg Janée
