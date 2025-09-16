@@ -69,7 +69,7 @@ Now, let's create two subdirectories in the data directory: `mammals` and `plots
 
 
 
-## Aknowledgements
+## Acknowledgments
 
 Adapted from Matt Jones, OSS 2017, https://github.com/NCEAS/oss-lessons
 
