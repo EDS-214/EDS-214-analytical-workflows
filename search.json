@@ -686,11 +686,11 @@
     "text": "In the following code examples, you need to type the command, but not include the command prompt (e.g., brun@workbench-1:~$) which just shows that the computer is ready to accept a command.\nWe’ll start by:\n\ncreating two directories with mkdir (make directory)\ncreate a simple text file using echo\nShow the contents of that file using cat (concatenate)\n\nbrun@workbench-1:~$ mkdir cli_intro\nbrun@workbench-1:~$ mkdir cli_intro/data\nbrun@workbench-1:~$ echo \"# Tutorial files related to CLI\" &gt; cli_intro/README.md\nbrun@workbench-1:~$ cat cli_intro/README.md\n# Tutorial files related to CLI\nbrun@workbench-1:~$ \n\n\n\n\n\ncopy a file into your directory with cp (copy)\nchange our working directory to that newly created directory using cd (change directory)\nlist the files in the directory with ls (list)\nlook where we are in the filesystem using pwd (print working directory)\nget an overview of the directory contents using tree\n\nUpload files from your local machine to the server using the different techniques mentioned above, You can download the 10min-loop.R file to your local machine from https://aurora.nceas.ucsb.edu/~brun/10min-loop.R\n\n\n\n\ndownload the data to your laptop: https://aurora.nceas.ucsb.edu/~brun/sampledata.zip\nunzip the folder\nupload the folder to workbench-1 using scp or cyberduck\n\nYour should end up with something like this:\nbrun@workbench-1:~$ ls -l\ntotal 16\n-rw-r--r-- 1 brun esmdomainusers   90 Aug 25 05:36 10min-loop.R\ndrwxr-xr-x 3 brun esmdomainusers 4096 Aug 24 23:05 github\ndrwxr-xr-x 3 brun esmdomainusers 4096 Aug 16 05:00 R\ndrwxr-xr-x 2 brun esmdomainusers 4096 Aug 25 05:37 sampledata\n\n\n\n\nNow, let’s create two subdirectories in the data directory: mammals and plots\n\nmove using cp all the mammals files from the sampledata folder to the mammals subdirectory; hint: you can use the wildcard *\nmove using mv the other files files from the sampledata folder to the plots subdirectory\ndouble check it is done using cd and ls\nremove rm the sampledata directory; hint: rmdir can only remove empty directories\nbonus: add a text file data_listing.txt in the data folder that lists all the files in it"
   },
   {
-    "objectID": "day2-cli_practice.html#aknowledgements",
-    "href": "day2-cli_practice.html#aknowledgements",
+    "objectID": "day2-cli_practice.html#acknowledgments",
+    "href": "day2-cli_practice.html#acknowledgments",
     "title": "Practicing CLI",
-    "section": "Aknowledgements",
-    "text": "Aknowledgements\nAdapted from Matt Jones, OSS 2017, https://github.com/NCEAS/oss-lessons"
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nAdapted from Matt Jones, OSS 2017, https://github.com/NCEAS/oss-lessons"
   },
   {
     "objectID": "day2-rstudio_server.html",
