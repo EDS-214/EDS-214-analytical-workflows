@@ -112,11 +112,11 @@
     "text": "A great overview of this approach to reproducible papers comes from:\nThis lesson will draw from existing materials:\nThe key idea in Marwick et al. (2018) is that of the research compendium: A single container for not just the journal article associated with your research but also the underlying analysis, data, and even the required software environment required to reproduce your work. Research compendia make it easy for researchers to do their work but also for others to inspect or even reproduce the work because all necessary materials are readily at hand due to being kept in one place.\nRather than a constrained set of rules, the research compendium is a scaffold upon which to conduct reproducible research using open science tools such as:\nFortunately for us, Ben Marwick (and others) have written an R package called rrtools that helps us create a research compendium from scratch.\nTo start a reproducible paper with rrtools, run:\n# Install the package\nremotes::install_github(\"benmarwick/rrtools\")\n\n# Attach the library\nlibrary(rrtools)\n\n# Create the compendium skeleton\nuse_compendium(\"mypaper\")\nYou should see output similar to the below:\nrrtools has created the beginnings of a research compendium for us. At this point, it looks mostly the same as an R package. That’s because it uses the same underlying folder structure and metadata and therefore it technically is an R package. And this means our research compendium will be easy to install, just like an R package.\nBefore we get to writing our reproducible paper, let’s fill in some more structure. Let’s:\nusethis::use_apl2_license() # Change this\nrrtools::use_readme_rmd()\nrrtools::use_analysis()\nAt this point, we’re ready to start writing the paper. To follow the structure rrtools has put in place for us, here are some pointers:\nIt would also be a good idea to initialize this folder as a git repo for maximum reproducibility:\nusethis::use_git()\nAfter that, push a copy up to GitHub.\n## create github repository and configure as git remote\nusethis::use_github()\nHopefully, now that you’ve created a research compendium with rrtools, you can imagine how a pre-defined structure like the one rrtools creates might help you organize your reproducible research and also make it easier for others to understand your work.\nFor a more complete example than the one we built above, take a look at benmarwick/teaching-replication-in-archaeology."
   },
   {
-    "objectID": "day4-reproducible_publications.html#aknowledgement",
-    "href": "day4-reproducible_publications.html#aknowledgement",
+    "objectID": "day4-reproducible_publications.html#acknowledgments",
+    "href": "day4-reproducible_publications.html#acknowledgments",
     "title": "Reproducible Publication with rrtools",
-    "section": "Aknowledgement",
-    "text": "Aknowledgement\nThe rrtools example had been ported from NCEAS Reproducible Research Techniques for Synthesis"
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThe rrtools example had been ported from NCEAS Reproducible Research Techniques for Synthesis"
   },
   {
     "objectID": "day4-pair_programming.html",
@@ -140,11 +140,11 @@
     "text": "Tips and Tricks for Effective Team Programming\nAdapted from Corey Johannsen: https://blog.newrelic.com/2017/10/31/mob-programming-hurdles/\n\nSuggest, don’t dictate: Instead of telling the driver what to type into their editor, we explain what we’re trying to accomplish and then help the driver find the best solution. We’ve found that drivers learn better this way, and they don’t just end up feeling like a stenographer. Whenever possible, we ask questions that lead the driver to discover the answers on their own.\nStay focused and be present: Shut your laptop and put your phone away. I’ve struggled with following this guideline—we all have—and I recognize that the distraction almost always affects the rest of the mob. We tell all our mob members to be present, and if you can’t, it’s OK to leave until you can be.\nUse a timer, but be ready to pause it: We switch drivers every 20 - 60 minutes. However, we often wander off implementation into design discussions—it’s unavoidable—so this is when we pause the timer. This is another key guideline of our mob: the time you spend driving should be dedicated to writing the code that helps complete the task, not discussing design solutions.\nSet specific tasks for each session: When our mob gathers for a session, we first agree on and create a checklist of the tasks we are going to complete, and order them by priority on a whiteboard. This ensures we are all focused on the same task and keeps us moving forward. Additionally, this keeps us aligned with Minimal Marketable Feature (MMF) work, which we can communicate with our engineering and product managers to assure them we’re completing tasks that align with developing small, self-contained features that demonstrate immediate customer value."
   },
   {
-    "objectID": "day4-pair_programming.html#aknowledgements",
-    "href": "day4-pair_programming.html#aknowledgements",
+    "objectID": "day4-pair_programming.html#acknowledgments",
+    "href": "day4-pair_programming.html#acknowledgments",
     "title": "Pair Programming",
-    "section": "Aknowledgements",
-    "text": "Aknowledgements\nThis section reuses a lot of materials from an R Meetup organized by the Santa Barbara R Users group (https://github.com/R-Meetup-SB/hackathon-201806), including material prepared by Irene Steves."
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis section reuses a lot of materials from an R Meetup organized by the Santa Barbara R Users group (https://github.com/R-Meetup-SB/hackathon-201806), including material prepared by Irene Steves."
   },
   {
     "objectID": "day4-analytical_workflows.html",
