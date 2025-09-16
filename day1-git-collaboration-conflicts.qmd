@@ -163,7 +163,7 @@ Some basic rules of thumb can avoid the vast majority of merge conflicts, saving
 
 ------------------------------------------------------------------------
 
-# Acknowledgement
+# Acknowledgements
 
 This section had been adapted from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html)
 
