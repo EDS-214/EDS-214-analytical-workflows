@@ -116,6 +116,6 @@ Hopefully, now that you've created a research compendium with `rrtools`, you can
 For a more complete example than the one we built above, take a look at [benmarwick/teaching-replication-in-archaeology](https://github.com/benmarwick/teaching-replication-in-archaeology).
 
 
-## Aknowledgement
+## Acknowledgments
 
 The `rrtools` example had been ported from [NCEAS Reproducible Research Techniques for Synthesis](https://learning.nceas.ucsb.edu/2021-02-RRCourse/index.html)

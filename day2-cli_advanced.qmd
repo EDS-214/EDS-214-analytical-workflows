@@ -202,13 +202,16 @@ $ brun@aurora:~/data$ head -3 env.csv | od -cx
 
 
 ## Create custom commands with "alias"
-```alias lwc='ls *.jpg | wc -l'```
+
+```bash
+alias lwc='ls *.jpg | wc -l'
+```
 
 You can create a number of custom aliases that are available whenever you log in, by putting commands such as the above in your shell start-up file, e.g. `.bashrc`
 
 
 
-# Aknowledgements
+# Acknowledgments
 
 This section reuses a lot of materials from [NCEAS Open Science for Synthesis (OSS)](https://learning.nceas.ucsb.edu/) intensive summer schools and other training. Contributions to this content have been made by Mark Schildhauer, Matt Jones, Jim Regetz and many others.
 
