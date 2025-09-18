@@ -6,57 +6,81 @@ title: "Coding together"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 ## Learning Objectives
 
 In this part of the lesson, you will learn:
 
-- Why __git__ is useful for reproducible analysis
-- How to use __git__ to track changes to your work over time
-- How to use __GitHub__ to collaborate with others
-- How to write effective commit messages
-- How to structure your commits so your changes are clear to others
-- How to fork a repository to contribute to its content
-- How to create a pull request
-- How to review a pull request
-
+-   Why **git** is useful for reproducible analysis
+-   How to use **git** to track changes to your work over time
+-   How to use **GitHub** to collaborate with others
+-   How to write effective commit messages
+-   How to structure your commits so your changes are clear to others
+-   How to fork a repository to contribute to its content
+-   How to create a pull request
+-   How to review a pull request
 
 ## Why collaborative coding
 
 ### [Slide deck](https://EDS-214.github.io/eds214-slides/collaborative_coding.html)
 
-Environmental Data Science (EDS), as many other data-driven research fields, requires a transdisciplinary approach to tackle challenges that often span across several domains of expertise.  Working as a team will leverage know-how from diverse collaborators and be the most efficient way to tackle complex problems in EDS. Consequently collaborative skills are required to work effectively as a member of a team. No matter their focus, highly effective teams share certain characteristics:
+Environmental Data Science (EDS), as many other data-driven research fields, requires a transdisciplinary approach to tackle challenges that often span across several domains of expertise. Working as a team will leverage know-how from diverse collaborators and be the most efficient way to tackle complex problems in EDS. Consequently collaborative skills are required to work effectively as a member of a team. No matter their focus, highly effective teams share certain characteristics:
 
-*   Right size
-*   Diverse group of people with the right mix of skills, knowledge, and competencies
-*   Aligned purpose and incentives
-*   Effective organizational structure
-*   Strong individual contributions
-*   Supportive team processes and culture
+-   Right size
+-   Diverse group of people with the right mix of skills, knowledge, and competencies
+-   Aligned purpose and incentives
+-   Effective organizational structure
+-   Strong individual contributions
+-   Supportive team processes and culture
 
-**Since Analytical Workflows are rarely linear!** and are developed iteratively, the most efficient way to iterate quickly on your analysis is to use scripts and leave copy-pasting behind.  _Programming as part of a team is different than writing a script for your(present)self_. However learning programming as part of a team is not only critical to the efficacy of your team, it will also you help you to grow as a programmer by:
+**Since Analytical Workflows are rarely linear!** and are developed iteratively, the most efficient way to iterate quickly on your analysis is to use scripts and leave copy-pasting behind. *Programming as part of a team is different than writing a script for your(present)self*. However learning programming as part of a team is not only critical to the efficacy of your team, it will also you help you to grow as a programmer by:
 
-*   Motivating you to document well your work
-*   Helping you to think how to make your work reusable (by you, your future you and others)
-*   Learning to read code from collaborators to build upon each others work
-*   Gain further knowledge in software development tools, such as version control
+-   Motivating you to document well your work
+-   Helping you to think how to make your work reusable (by you, your future you and others)
+-   Learning to read code from collaborators to build upon each others work
+-   Gain further knowledge in software development tools, such as version control
 
 **Developing those skills will accelerate your research and open the door for you to contribute to open source projects.**
 
-
 ## How to code together
 
-It is important to acknowledge that there are many solutions to the complex research questions you will be facing in EDS. Each of those solutions will have several possible implementations, meaning that more likely you might code this implementation differently than your collaborators. Integrated software engineer teams generally try to mitigate this by developing coding standards and conventions that will guide how to write code and develop specific implementation. In scientific teams in which the collaboration is more loose and maybe more ephemeral as well, developing detailed coding standards will be too much of an overhead. However, we think it is important to acknowledge that coding style may varies among the data scientists of a project and it is a good discussion to have among the team at the beginning of the project. For example, in R it could be trying to use the tidyverse approach as much as possible. We also think there are two activities that will make the team more efficient: Code Review and Pair Programming. 
+It is important to acknowledge that there are many solutions to the complex research questions you will be facing in EDS. Each of those solutions will have several possible implementations, meaning that more likely you might code this implementation differently than your collaborators. Integrated software engineer teams generally try to mitigate this by developing coding standards and conventions that will guide how to write code and develop specific implementation. In scientific teams in which the collaboration is more loose and maybe more ephemeral as well, developing detailed coding standards will be too much of an overhead. However, we think it is important to acknowledge that coding style may varies among the data scientists of a project and it is a good discussion to have among the team at the beginning of the project. For example, in R it could be trying to use the tidyverse approach as much as possible. We also think there are two activities that will make the team more efficient: Code Review and Pair Programming.
 
-
-### Tools 
+### Tools
 
 The good news is there are several tools out there that have been designed to make developing code as a team more efficient. In this course, we will focus on getting familiar with the following:
 
-- Version control system: say goodbye to `save as`
-- Code repository: where we share code and communicate ideas and feedback
+-   Version control system: say goodbye to `save as`
+-   Code repository: where we share code and communicate ideas and feedback
+
+## Techinques
+
+### Code ~~Review~~ Feedback
+
+Code reviews are an **asynchronou**s team activity. It is a great opportunity to have one more pair of eyes looking at your code. Code reviews are important because they prevent bugs, spread knowledge across team members, and strengthen collaboration (inclunding new team members) and more over produce more robust and reusable code.
+
+Questions one should consider while conducting a Code Review:
+
+- Are there any obvious logic errors in the code?
+- Could the code be simplified (e.g. unsused libraries) / made more efficient?
+- Are there comments explaining well the code and potential analytical decisions?
+- Are variable and function names descriptive and consistent?
+- Does the new code conform to existing style guidelines (e.g base R vs tidyverse style)?
 
 
+#### Tips
+
+- Provide constructive feedback to the `submitter`
+- The `reviewer` should see this activity as a great way to learn from others
+- Do it often on small incremental changes rather on a 1,000 lines script
 
 
+### Pair Programming
 
+This will be for [day4](day4-pair_programming.html)!
+
+
+## Further Readings
+
+- Tidyverse team code review guidelines: <https://code-review.tidyverse.org>
+- Atlassian tips on code review: <https://www.atlassian.com/agile/software-development/code-reviews>
+- GitLab code review explanation: <https://about.gitlab.com/topics/version-control/what-is-code-review>
