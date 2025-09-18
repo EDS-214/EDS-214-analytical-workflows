@@ -156,6 +156,12 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
   </ul></li>
+  <li><a href="#techinques" id="toc-techinques" class="nav-link" data-scroll-target="#techinques">Techinques</a>
+  <ul class="collapse">
+  <li><a href="#code-review-feedback" id="toc-code-review-feedback" class="nav-link" data-scroll-target="#code-review-feedback">Code <del>Review</del> Feedback</a></li>
+  <li><a href="#pair-programming" id="toc-pair-programming" class="nav-link" data-scroll-target="#pair-programming">Pair Programming</a></li>
+  </ul></li>
+  <li><a href="#further-readings" id="toc-further-readings" class="nav-link" data-scroll-target="#further-readings">Further Readings</a></li>
   </ul>
 </nav>
     </div>
@@ -228,9 +234,44 @@ ul.task-list li input[type="checkbox"] {
 <li>Version control system: say goodbye to <code>save as</code></li>
 <li>Code repository: where we share code and communicate ideas and feedback</li>
 </ul>
-
-
 </section>
+</section>
+<section id="techinques" class="level2">
+<h2 class="anchored" data-anchor-id="techinques">Techinques</h2>
+<section id="code-review-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="code-review-feedback">Code <del>Review</del> Feedback</h3>
+<p>Code reviews are an <strong>asynchronou</strong>s team activity. It is a great opportunity to have one more pair of eyes looking at your code. Code reviews are important because they prevent bugs, spread knowledge across team members, and strengthen collaboration (inclunding new team members) and more over produce more robust and reusable code.</p>
+<p>Questions one should consider while conducting a Code Review:</p>
+<ul>
+<li>Are there any obvious logic errors in the code?</li>
+<li>Could the code be simplified (e.g.&nbsp;unsused libraries) / made more efficient?</li>
+<li>Are there comments explaining well the code and potential analytical decisions?</li>
+<li>Are variable and function names descriptive and consistent?</li>
+<li>Does the new code conform to existing style guidelines (e.g base R vs tidyverse style)?</li>
+</ul>
+<section id="tips" class="level4">
+<h4 class="anchored" data-anchor-id="tips">Tips</h4>
+<ul>
+<li>Provide constructive feedback to the <code>submitter</code></li>
+<li>The <code>reviewer</code> should see this activity as a great way to learn from others</li>
+<li>Do it often on small incremental changes rather on a 1,000 lines script</li>
+</ul>
+</section>
+</section>
+<section id="pair-programming" class="level3">
+<h3 class="anchored" data-anchor-id="pair-programming">Pair Programming</h3>
+<p>This will be for <a href="day4-pair_programming.html">day4</a>!</p>
+</section>
+</section>
+<section id="further-readings" class="level2">
+<h2 class="anchored" data-anchor-id="further-readings">Further Readings</h2>
+<ul>
+<li>Tidyverse team code review guidelines: <a href="https://code-review.tidyverse.org" class="uri">https://code-review.tidyverse.org</a></li>
+<li>Atlassian tips on code review: <a href="https://www.atlassian.com/agile/software-development/code-reviews" class="uri">https://www.atlassian.com/agile/software-development/code-reviews</a></li>
+<li>GitLab code review explanation: <a href="https://about.gitlab.com/topics/version-control/what-is-code-review" class="uri">https://about.gitlab.com/topics/version-control/what-is-code-review</a></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
